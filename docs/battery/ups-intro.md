@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Introduction
 
-PiSugar Kitchen begins on developing battery solutions for raspberry pi zero, in what we think is the best way.
+PiSugar Kitchen began by developing battery solutions for Raspberry Pi Zero, in what we believe is the best way.
 
 We believe we can help pi lovers to achieve their dreams with our knowledge and passion :-D
 
@@ -16,7 +16,7 @@ Take a look at our products:
 * [PiSugarS Series](./pisugar-s-series)
 * [PiSugar3 Series](./pisugar-3-series)
 * [PiSugar Power Manager (Software)](./pisugar-power-manager)
-* [PiSugar WiFi Config (Software)](./pisugar-wifi-config.md)
+* [PiSugar WiFi Config (Software)](./pisugar-wifi-config)
 * [PiSugar Scripts Example (Software)](https://github.com/PiSugar/pisugar-power-manager-rs/tree/master/scripts)
 * [FAQ](./faq)
 * [Where To Buy](./where-to-buy)

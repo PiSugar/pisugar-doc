@@ -11,13 +11,13 @@ We believe we can help pi lovers to achieve their dreams with our knowledge and 
 Take a look at our products:
 
 * [PiSugar1](./pisugar-1)
-* [PiSugar2](./pisugar-2)
-* [PiSugar2 Plus](./pisugar-2-plus)
+* [PiSugar2](./pisugar2/pisugar-2)
+* [PiSugar2 Plus](./pisugar2/pisugar-2-plus)
 * [PiSugarS Series](./pisugar-s-series)
-* [PiSugar3 Series](./pisugar-3-series)
-* [PiSugar Power Manager (Software)](./pisugar-power-manager)
-* [PiSugar WiFi Config (Software)](./pisugar-wifi-config)
+* [PiSugar3 Series](./pisugar3/pisugar-3-series)
+* [PiSugar Power Manager (Software)](/docs/software/power-management/pisugar-power-manager)
 * [PiSugar Scripts Example (Software)](https://github.com/PiSugar/pisugar-power-manager-rs/tree/master/scripts)
+* [PiSugar WiFi Config (Software)](/docs/software/utility-tools/pisugar-wifi-config)
 * [FAQ](./faq)
 * [Where To Buy](./where-to-buy)
 

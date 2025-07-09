@@ -113,14 +113,14 @@ const config: Config = {
         {
           title: "Docs",
           items: [
-            {
-              label: "Battery / UPS",
-              to: "/docs/battery",
-            },
-            {
-              label: "Whisplay HAT",
-              to: "/docs/whisplay",
-            },
+            // {
+            //   label: "Battery / UPS",
+            //   to: "/docs/battery",
+            // },
+            // {
+            //   label: "Whisplay HAT",
+            //   to: "/docs/whisplay",
+            // },
           ],
         },
         {

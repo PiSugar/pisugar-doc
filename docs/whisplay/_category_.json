@@ -2,6 +2,7 @@
   "label": "PiSugar Whisplay HAT",
   "position": 3,
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "slug": "/whisplay"
   }
 }

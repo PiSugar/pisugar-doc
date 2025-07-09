@@ -4,7 +4,6 @@ sidebar_position: 4
 
 # PiSugar2
 
-
 PiSugar2 is designed for pi-zeros. Compatible with all pi0 series(pi0,pi0w,pi0wh), with/without GPIO headers.
 
 Based on PiSugar1, we added UPS, RTC and I2C features on this version. 
@@ -103,10 +102,7 @@ PiSugar2 has some solder pads for developers to debug or add other functions.
 * I2C pads: SDA and SCL, bridge to pi0's i2c-1
 * 5V Input (Qi): for 5V wireless charging or solar charging
 * 5V Output: other usages
-<!-- 
-<p>
-  <img width="600" src="http://cdn.pisugar.com/img/pisugar2-detail.jpg?imageView2/0/w/1000">
-</p> -->
+
 ![PiSugar2 Detail](http://cdn.pisugar.com/img/pisugar2-detail.jpg?imageView2/0/w/1000)
 
 

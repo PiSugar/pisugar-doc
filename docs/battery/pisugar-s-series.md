@@ -4,8 +4,6 @@ sidebar_position: 2
 
 # PiSugarS Series
 
-<!-- ![pisugar logo](https://i.loli.net/2021/07/17/J9rpKcwdjoPXugZ.png) -->
-
 PiSugar S serial is designed for Raspberry Pi like PiSugar 2, but with fewer functions and convenient UPS settings.
 
 # Hardware SPECS

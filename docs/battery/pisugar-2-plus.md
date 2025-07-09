@@ -4,18 +4,10 @@ sidebar_position: 3
 
 # PiSugar2 Plus
 
-<!-- <p align="center">
-  <img width="320" src="https://raw.githubusercontent.com/JdaieLin/PiSugar/master/logo.jpg">
-</p> -->
-<!-- ![pisugar logo](https://i.loli.net/2021/07/17/J9rpKcwdjoPXugZ.png) -->
-
 Building on the success of powering Raspberry Pi Zero, we've applied the same technology to power larger Raspberry Pi models.
 
 So here comes PiSugar2 Plus(Pro), a special PiSugar version for Raspberry Pi 2/3A/3B/3B+/4B. It's designed with the same architecture as PiSugar2, with a bigger size and some additional features.
 
-<!-- <p align="left">
-  <img width="400" src="http://cdn.pisugar.com/img/pro-3.JPG?imageView2/0/w/800">
-</p> -->
 ![PiSugar2 Pro](https://cdn.pisugar.com/img/pro-3.JPG?imageView2/0/w/800)
 
 ## Hardware SPECS

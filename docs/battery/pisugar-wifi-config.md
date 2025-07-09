@@ -4,13 +4,8 @@ sidebar_position: 7
 
 # PiSugar Wifi Config (software)
 
-# sugar-wifi-conf
-
-<!-- <img width="200" src="https://github.com/user-attachments/assets/e620a5b4-a788-4b72-8f49-fe186f2bf7fa" />
-<img width="200" src="https://raw.githubusercontent.com/PiSugar/sugar-wifi-conf/master/image/qrcode.jpg" /> -->
 ![PiSugar Wifi Config QR Code](https://raw.githubusercontent.com/PiSugar/sugar-wifi-conf/master/image/qrcode.jpg)
 ![PiSugar Wifi Config](https://github.com/user-attachments/assets/e620a5b4-a788-4b72-8f49-fe186f2bf7fa)
-
 
 English | [简体中文](https://github.com/PiSugar/sugar-wifi-conf/blob/master/README.cn_zh.md)
 

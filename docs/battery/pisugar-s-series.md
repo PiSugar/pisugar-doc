@@ -28,6 +28,16 @@ PiSugar S serial is designed for Raspberry Pi like PiSugar 2, but with fewer fun
 1. Turn on the power switch and enjoy!
 
 # Auto start up function and custom button
+
+
+:::warning
+
+Since PiSugar S and PiSugar S Plus use the I2C SCL pin to start up the Raspberry Pi system, the automatic startup function cannot be used together with I2C communication.
+
+If you need to use Raspberry Pi's i2c-1 bus, please turn the auto switch to OFF.
+
+:::
+
 ### Turn on the function switch
 * If the external power is restored during the Raspberry Pi system shutdown, the system will be waked up.
 * If external power supply is available, the SCL pin is low level.Otherwise, it will remain high. 

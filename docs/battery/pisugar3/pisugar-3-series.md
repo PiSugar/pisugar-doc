@@ -138,7 +138,7 @@ PiSugar3 Plus PCB
 
 ## I2C Datasheet
 
-For more details, please refer to [PiSugar 3 I2C Datasheet](https://github.com/PiSugar/PiSugar/wiki/PiSugar-3-I2C-Datasheet).
+For more details, please refer to [PiSugar 3 I2C Datasheet](pisugar-3-i2c).
 
 ## 3D Printed Case
 

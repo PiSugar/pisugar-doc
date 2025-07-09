@@ -71,7 +71,7 @@ After finished, you can manage the battery by visiting http://\<your raspberry i
 
 PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less than 2% pi0 cpu) and exquisite designed webUI. 
 
-User Guide: https://github.com/PiSugar/PiSugar/wiki/PiSugar-Power-Manager-(Software)
+User Guide can be found [here](/docs/software/power-management/pisugar-power-manager).
 
 ## API (Same as PiSugar2)
 

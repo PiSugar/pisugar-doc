@@ -2,7 +2,7 @@
 sidebar_position: 6
 ---
 
-# PiSugar Power Manager (software)
+# PiSugar Power Manager
 
 PiSugar Power Manager is a software created for PiSugar 2/3 series.
 

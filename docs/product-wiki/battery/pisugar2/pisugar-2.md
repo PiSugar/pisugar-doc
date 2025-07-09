@@ -60,7 +60,7 @@ PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less 
 
 Distinguish between PiSugar 2 (2-LED) and 4-LED models: https://github.com/PiSugar/PiSugar/wiki/PiSugar-Power-Manager-(Software)#support-model-list
 
-User Guide: https://github.com/PiSugar/PiSugar/wiki/PiSugar-Power-Manager-(Software)
+User Guide can be found [here](/docs/software/power-management/pisugar-power-manager).
 
 ## API
 

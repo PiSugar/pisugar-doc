@@ -89,6 +89,12 @@ const config: Config = {
           label: "Product Wiki",
         },
         {
+          type: "docSidebar",
+          sidebarId: "softwareSidebar",
+          position: "left",
+          label: "Software",
+        },
+        {
           href: "https://www.pisugar.com",
           label: "Shop",
           position: "right",

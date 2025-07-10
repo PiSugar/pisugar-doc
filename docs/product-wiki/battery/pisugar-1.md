@@ -8,6 +8,12 @@ PiSugar 1 is our first product which aims to create an easiest way to power a Pi
 
 ![PiSugar Demo](https://raw.githubusercontent.com/JdaieLin/PiSugar/master/demo.gif)
 
+:::info
+
+PiSugar 1 cannot be used as a UPS (Uninterrupted Power Supply). When external power is disconnected, there will be a brief power interruption that causes the Raspberry Pi to restart. This limitation is important to consider for applications requiring continuous operation.
+
+:::
+
 ## Hardware SPECS
 
 * PowerIC: Injoice IP5306 (without i2c)

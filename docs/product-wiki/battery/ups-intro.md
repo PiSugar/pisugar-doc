@@ -2,7 +2,7 @@
 sidebar_position: 0
 ---
 
-# Introduction
+# PiSugar Battery / UPS
 
 PiSugar Kitchen began by developing battery solutions for Raspberry Pi Zero, in what we believe is the best way.
 

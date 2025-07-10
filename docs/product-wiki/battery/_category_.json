@@ -2,7 +2,7 @@
   "label": "PiSugar Battery / UPS",
   "position": 2,
   "link": {
-    "type": "generated-index",
-    "description": "PiSugar is a series of battery HATs for Raspberry Pi, providing UPS functionality and power management.",
+    "type": "doc",
+    "id": "product-wiki/battery/ups-intro"
   }
 }

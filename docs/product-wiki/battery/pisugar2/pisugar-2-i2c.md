@@ -17,7 +17,7 @@ Introduction
 
 This document will explain how to programmatic approach the I2C-bus of the PiSugar2 (Pro) device.
 With this information a library, API of application can be designed.
-More source can be found [here](/docs/software/power-management/pisugar-power-manager).
+More source can be found [here](../pisugar-power-manager).
 
 In this document examples use the command line programs [**i2cget**](https://manpages.debian.org/testing/i2c-tools/i2cget.8.en.html) and [**i2cset**](https://manpages.debian.org/testing/i2c-tools/i2cset.8.en.html).
 

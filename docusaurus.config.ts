@@ -90,9 +90,9 @@ const config: Config = {
         },
         {
           type: "docSidebar",
-          sidebarId: "softwareSidebar",
+          sidebarId: "toolsSidebar",
           position: "left",
-          label: "Software",
+          label: "Useful Tools",
         },
         {
           href: "https://www.pisugar.com",
@@ -111,12 +111,12 @@ const config: Config = {
       style: "dark",
       links: [
         {
-          title: "Docs",
+          title: "Products",
           items: [
-            // {
-            //   label: "Battery / UPS",
-            //   to: "/docs/battery",
-            // },
+            {
+              label: "Battery / UPS",
+              to: "/docs/product-wiki/battery/ups-intro",
+            },
             // {
             //   label: "Whisplay HAT",
             //   to: "/docs/whisplay",
@@ -124,12 +124,13 @@ const config: Config = {
           ],
         },
         {
-          title: "Community",
+          title: "Tools",
           items: [
-            // {
-            //   label: "Stack Overflow",
-            //   href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            // },
+            {
+              label: "Wifi Config",
+              to: "/docs/useful-tools/pisugar-wifi-config"
+              // href: "https://stackoverflow.com/questions/tagged/docusaurus",
+            },
             // {
             //   label: "Discord",
             //   href: "https://discordapp.com/invite/docusaurus",

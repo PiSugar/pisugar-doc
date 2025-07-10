@@ -15,14 +15,14 @@ Take a look at our products:
 * [PiSugar2 Plus](./pisugar2/pisugar-2-plus)
 * [PiSugarS Series](./pisugar-s-series)
 * [PiSugar3 Series](./pisugar3/pisugar-3-series)
-* [PiSugar Power Manager (Software)](/docs/software/power-management/pisugar-power-manager)
+
+Extra Support Documents:
+
+* [PiSugar Power Manager (Software)](./pisugar-power-manager)
 * [PiSugar Scripts Example (Software)](https://github.com/PiSugar/pisugar-power-manager-rs/tree/master/scripts)
-* [PiSugar WiFi Config (Software)](/docs/software/utility-tools/pisugar-wifi-config)
 * [FAQ](./faq)
 * [Where To Buy](./where-to-buy)
-
-Here are certifications of our products:
-[PiSugar Certification](https://github.com/PiSugar/pisugar-documents)
+* [Certifications](https://github.com/PiSugar/pisugar-documents)
 
 
 # Function comparison

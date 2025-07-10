@@ -4,9 +4,13 @@ sidebar_position: 3
 
 # PiSugarS Series
 
-PiSugar S serial is designed for Raspberry Pi like PiSugar 2, but with fewer functions and convenient UPS settings.
+PiSugar S (Plus) offers an optimized power solution for Raspberry Pi, featuring a streamlined design similar to PiSugar 2, while focusing on essential hardware functionality.
 
-# Hardware SPECS
+:::tip
+PiSugar S (Plus) does not support data communication. If you need to get battery status, please use PiSugar 2 or PiSugar 3 series.
+:::
+
+# Hardware Specifications
 * MicroUSB / TypeC: charging port
 * Power Switch
 * Start up button
@@ -19,7 +23,7 @@ PiSugar S serial is designed for Raspberry Pi like PiSugar 2, but with fewer fun
 | Input                     |     5V-3A max      |     5V-3A max      |
 | Output                    |     5V-3A max      |    5V-2.5A max     |
 | Battery capacity          |      5000mah      |      1200mah      |
-| Size of PCB               |     65mmX56mm     |     65mmX30mm     |
+| Size of PCB               |     65mm x 56mm     |     65mm x 30mm     |
 
 # Hardware Installation
 1. Turn the power switch to off
@@ -50,9 +54,10 @@ If you need to use Raspberry Pi's i2c-1 bus, please turn the auto switch to OFF.
 * Pressing the button will trigger SCL to low level, and if the Raspberry Pi is off, it will wake up the system. If the Raspberry Pi is turned on, it can be used as a custom button. 
 * Because SCL is not continuously pulled down, I2C functions normally.
 
-###  Example script
+###  Example script for custom button
 
 https://github.com/PiSugar/pisugar-power-manager-rs/blob/master/scripts/PiSugarSButtonActive.sh
+
 #  Battery protection
 When the battery voltage is lower than 3V, PiSugar S will shut down immediately. It will not turn on again until the battery voltage up to 3.6V.
 

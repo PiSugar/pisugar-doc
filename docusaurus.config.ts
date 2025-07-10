@@ -42,7 +42,7 @@ const config: Config = {
     [
       '@docusaurus/plugin-google-gtag',
       {
-        trackingID: 'G-459513469',  // ← 你的 Google Analytics 4 ID
+        trackingID: 'G-6K1JYDGLHP',  // ← 你的 Google Analytics 4 ID
         anonymizeIP: true,          // 可选：是否匿名用户IP
       },
     ],

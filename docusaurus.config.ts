@@ -40,10 +40,10 @@ const config: Config = {
 
   plugins: [
     [
-      '@docusaurus/plugin-google-gtag',
+      "@docusaurus/plugin-google-gtag",
       {
-        trackingID: 'G-6K1JYDGLHP',  // ← 你的 Google Analytics 4 ID
-        anonymizeIP: true,          // 可选：是否匿名用户IP
+        trackingID: "G-6K1JYDGLHP", // ← 你的 Google Analytics 4 ID
+        anonymizeIP: true, // 可选：是否匿名用户IP
       },
     ],
   ],
@@ -56,8 +56,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            "https://github.com/PiSugar/pisugar-doc/tree/main/",
+          editUrl: "https://github.com/PiSugar/pisugar-doc/tree/main/",
         },
         blog: false,
         // blog: {
@@ -139,7 +138,7 @@ const config: Config = {
           items: [
             {
               label: "Wifi Config",
-              to: "/docs/useful-tools/pisugar-wifi-config"
+              to: "/docs/useful-tools/pisugar-wifi-config",
               // href: "https://stackoverflow.com/questions/tagged/docusaurus",
             },
             // {

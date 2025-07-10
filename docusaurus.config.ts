@@ -38,6 +38,16 @@ const config: Config = {
     locales: ["en"],
   },
 
+  plugins: [
+    [
+      '@docusaurus/plugin-google-gtag',
+      {
+        trackingID: 'G-459513469',  // ← 你的 Google Analytics 4 ID
+        anonymizeIP: true,          // 可选：是否匿名用户IP
+      },
+    ],
+  ],
+
   presets: [
     [
       "classic",

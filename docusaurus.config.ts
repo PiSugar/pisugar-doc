@@ -78,8 +78,8 @@ const config: Config = {
       title: "",
       logo: {
         alt: "PiSugar Logo",
-        src: "img/pisugar_logo.svg",
-        srcDark: "img/pisugar_logo_dark.svg", // Logo for dark mode
+        src: "img/black_logo.svg",
+        srcDark: "img/white_logo.svg", // Logo for dark mode
       },
       items: [
         {

@@ -84,6 +84,12 @@ const config: Config = {
   themeConfig: {
     // Replace with your project's social card
     image: "img/docusaurus-social-card.jpg",
+    algolia: {
+      appId: "IKLJNMQK0D",
+      apiKey: "0b8158c3a41bb32c2b33b849d9aacc97",
+      indexName: "PiSugar Documantation",
+      searchPagePath: false,
+    },
     navbar: {
       title: "",
       logo: {

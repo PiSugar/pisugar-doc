@@ -39,7 +39,6 @@ If you cannot find any devices, or see lots of 'X.XX.X.X...' things, please try 
 
 During the installation process, you need to select the corresponding model. Choosing the correct PiSugar model is essential for the server to function properly.
 
-
 | Model            |                   Description                   |                                                                                             Photo                                                                                              |
 | :--------------- | :---------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 | PiSugar 3        |            PiSugar 3/ PiSugar 3 Plus            | ![PiSugar 3](https://github.com/user-attachments/assets/c90403ce-f42e-486a-a506-0dd0ba3b8664) ![PiSugar3Plus](https://github.com/user-attachments/assets/278228b5-22e9-4155-abde-8758006bf14f) |
@@ -165,6 +164,13 @@ Or
 | set_safe_shutdown_level    |                                             set auto shutdown level %                                              |            safe_shutdown_level [number]             |
 | set_safe_shutdown_delay    |                                         set auto shutdown delay in second                                          |            safe_shutdown_delay [number]             |
 | set_battery_charging_range |                                                 set charging range                                                 |     set_battery_charging_range [number, number]     |
+| set_allow_charging         |                                             enable or disable charging                                             |          set_allow_charging [true\|false]           |
+| set_battery_output         |                                          enable or disable battery output                                          |          set_battery_output [true\|false]           |
+| set_auth                   |                                     set or clear http auth (with no arguments)                                     |            set_auth [username password]             |
+| set_anti_mistouch          |                                          enable or disable anti-mistouch                                           |           set_anti_mistouch [true\|false]           |
+| set_soft_poweroff          |                                        enable or disable software poweroff                                         |           set_soft_poweroff [true\|false]           |
+| set_soft_poweroff_shell    |                                                soft poweroff shell                                                 |          set_soft_poweroff_shell [string]           |
+| set_input_protect          |                                     enable or disable battery hardware protect                                     |           set_input_protect [true\|false]           |
 
 ## Server Config
 

@@ -50,6 +50,7 @@ User Guide can be found [here](../pisugar-power-manager).
 ```
 curl https://cdn.pisugar.com/release/PiSugarUpdate.sh | sudo bash
 ```
+If the device doesn't enter flashing mode after running the script, you can try pressing the reset button located on the PiSugar3's PCB.
 
 ### **Hardware battery protection**
 

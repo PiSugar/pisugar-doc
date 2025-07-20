@@ -4,12 +4,14 @@ sidebar_position: 0
 
 # Whisplay HAT
 
-<img src="/img/whisplay_logo@4x-8.png" alt="Whisplay HAT" width="300"></img>
+<img src="/img/whisplay_logo@4x-8.png" alt="Whisplay HAT" width="200"></img>
+
 
 **PiSugar Whisplay HAT** addresses the core challenges Raspberry Pi Zero users face: while the Pi Zero offers incredible computing power in a tiny package, adding audio, display, and user interface components typically means a mess of wires, multiple HATs, and compromised portability. 
 
 Whisplay HAT elegantly solves this problem by integrating all essential multimedia interfaces into a single, perfectly-sized expansion board, preserving the Pi Zero's compact form factor while dramatically expanding its capabilities.
 
+<img src="/img/whisplay-demo.jpg" alt="Whisplay HAT Demo" width="600"></img>
 
 ## Key Features
 Despite its tiny form factor, it packs an impressive array of hardware features:

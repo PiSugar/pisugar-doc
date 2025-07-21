@@ -23,7 +23,7 @@ Modifications to the circuit may void the product warranty.
 When selecting a replacement battery, please ensure it meets the following criteria:
 
 - **Type**: Single-cell lithium battery (3.7V)
-- **Connector**: JST PH 2.54mm connector (plus version) or direct soldering to the board (zero version)
+- **Connector**: JST PH 2.0mm connector (plus version) or direct soldering to the board (zero version)
 - **Polarity**: Please check the polarity markings on the PiSugar board
 
 ## Custom Battery Curve (For PiSugar 2/3)

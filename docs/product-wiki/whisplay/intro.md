@@ -4,12 +4,12 @@ sidebar_position: 0
 
 # Whisplay HAT
 
+<img src="/img/whisplay_logo@4x-8.png" alt="Whisplay HAT" width="200"></img>
+
 :::info
 Whisplay HAT is currently **under development** and not yet available for purchase.
 [**Click Here**](https://www.pisugar.com/pages/subscribe-whisplay-hat) to subscribe to our newsletter to be notified when it launches.
 :::
-
-<img src="/img/whisplay_logo@4x-8.png" alt="Whisplay HAT" width="200"></img>
 
 **PiSugar Whisplay HAT** is a multifunctional expansion board for Raspberry Pi Zero, integrating a display, microphones, speakers, and more to turn it into a portable interactive device.
 

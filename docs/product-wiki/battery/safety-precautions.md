@@ -8,14 +8,6 @@ sidebar_position: 5
 This document contains important safety information. Please read it carefully before using the PiSugar Battery / UPS.
 :::
 
-## Glossary
-
-This product uses the following terms to classify potential hazards resulting from improper operation:
-
-- CAUTION: Failure to follow instructions may result in property damage and minor injury.
-- WARNING： Failure to follow instructions may result in property damage and more severe injury.
-- DANGER：Failure to follow instructions may result in property damage, major accidents, and severe injury.
-
 ## Warnings
 
 - This product is NOT a child's product and is not suitable for use by children of any age.
@@ -61,6 +53,10 @@ For safety and battery longevity, follow these guidelines during charging:
 
 To prevent performance degradation or accidents, follow these rules during storage and transportation:
 
+:::danger
+This product is NOT a child's product and is not suitable for use by children of any age.
+:::
+
 1. **Keep Away from Children**: Store batteries in a secure location out of children's reach. If small parts are swallowed, seek medical help immediately.
 2. **Avoid High Temperatures**: NEVER store batteries in high-temperature areas (e.g., direct sunlight, closed vehicles, near fire sources or heaters). Ideal storage temperature is 22°C~28°C.
 3. **Keep Dry & Ventilated**: Store batteries in a dry, well-ventilated place. Avoid damp or potentially water-leaking environments.
@@ -73,6 +69,10 @@ To prevent performance degradation or accidents, follow these rules during stora
 10. **Recommended Storage**: Store the PiSugar power module in a dry, ventilated place, away from heat sources and flammable materials, and out of direct sunlight.
 
 ## Disposal Precautions
+
+:::info
+Batteries are hazardous waste. Do NOT dispose of them in regular trash. Follow local environmental recycling methods.
+:::
 
 1. **Fully Discharge Before Recycling**: Completely discharge the battery before recycling. Undischarged batteries pose a fire risk during transport or bulk processing.
 2. **Do Not Dispose in Regular Trash**: Batteries are hazardous waste. NEVER dispose of them with household garbage. Place them in designated battery recycling bins or collection points provided by local government or community.
@@ -94,12 +94,17 @@ To prevent performance degradation or accidents, follow these rules during stora
 
 The PiSugar power module uses rechargeable lithium batteries. To ensure transport safety and comply with aviation regulations, strictly follow these guidelines:
 
-- Carry-On Only: Lithium battery products MUST be carried in your hand luggage (carry-on). They are PROHIBITED in checked baggage. This is mandatory for most airlines and the International Air Transport Association (IATA).
-- Battery Charge Level: Reduce battery charge to below 5% before boarding to minimize thermal runaway risk. Perform discharging away from fire sources in a well-ventilated area.
-- Protective Packaging: Package the battery separately to prevent contact with metal items or other power interfaces, preventing short circuits during transport. Using a battery case or anti-static bag is safer.
-- Product Documentation: Carry this manual or a printout in case airlines or customs require explanation. It states the product is a small, portable, low-power development board power module.
-- Check Destination Rules: Regulations for battery transport vary by country/region. Check the specific restrictions of the airline and destination country beforehand to ensure compliance.
-- If Denied: If instructed to dispose of the battery at security or the gate, comply with airline staff instructions. Do NOT attempt to hide the battery to board, as this may carry legal risks.
+**Carry-On Only**: Lithium battery products MUST be carried in your hand luggage (carry-on). They are PROHIBITED in checked baggage. This is mandatory for most airlines and the International Air Transport Association (IATA).
+
+**Battery Charge Level**: Reduce battery charge to below 5% before boarding to minimize thermal runaway risk. Perform discharging away from fire sources in a well-ventilated area.
+
+**Protective Packaging**: Package the battery separately to prevent contact with metal items or other power interfaces, preventing short circuits during transport. Using a battery case or anti-static bag is safer.
+
+**Product Documentation**: Carry this manual or a printout in case airlines or customs require explanation. It states the product is a small, portable, low-power development board power module.
+
+**Check Destination Rules**: Regulations for battery transport vary by country/region. Check the specific restrictions of the airline and destination country beforehand to ensure compliance.
+
+**If Denied**: If instructed to dispose of the battery at security or the gate, comply with airline staff instructions. Do NOT attempt to hide the battery to board, as this may carry legal risks.
 
 ## Technical Support and Other Information
 

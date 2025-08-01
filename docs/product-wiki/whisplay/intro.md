@@ -35,6 +35,8 @@ What makes Whisplay HAT truly remarkable is its exceptional space utilization. B
 
 ## Practical Applications
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lOVA0Gui-4Q?si=6nDe76paqT1ZHbfH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 The Whisplay HAT opens up numerous possibilities:
 
 - **AI Chatbot**: Create your own compact AI chatbot with voice recognition and audio output

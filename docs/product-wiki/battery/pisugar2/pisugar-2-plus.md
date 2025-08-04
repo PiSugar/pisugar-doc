@@ -10,6 +10,16 @@ So here comes PiSugar2 Plus(Pro), a special PiSugar version for Raspberry Pi 2/3
 
 ![PiSugar2 Pro](https://cdn.pisugar.com/img/pro-3.JPG?imageView2/0/w/800)
 
+## How To Mount
+
+- Turn the power switch to off
+- Attach pi-zero's back to the pin side of PiSugar2 Plus (Pogo pins on PiSugar2 Plus should be at the bottom of the RPI's GPIO)
+- Tighten the four screws (M2.5) from the pi-side
+- If the battery level is low or not indicated, please charge it first
+- Press the `activation button` for 2 seconds
+- Turn on the power switch and enjoy!
+
+
 ## Hardware SPECS
 
 * PowerIC: Injoince IP5312
@@ -42,17 +52,6 @@ So here comes PiSugar2 Plus(Pro), a special PiSugar version for Raspberry Pi 2/3
 * I2C Data Abilities: get battery data by api or webUI
 * Programmable Button: customize a button function base on your project need
 * 3A Battery Output (Max 6A in Turbo Mode): meet the requirement of rpi 4B and more power consuming scenarios.
-
-
-## Hardware Installation
-
-1. Turn the power switch to off
-2. Attach pi-zero's back to the pin side of PiSugar2 Pro
-3. Tighten the four screws (M2.5) from the pi-side
-4. Plug in the lithium battery and click the tap button to see the battery level
-5. If the battery level is low or not indicated, please charge it first
-6. click the [activation button](https://github.com/PiSugar/PiSugar/wiki/PiSugar2-Pro/_edit#activation)
-7. Turn on the power switch and enjoy!
 
 ## Software Installation (Same as PiSugar2)
 

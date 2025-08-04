@@ -10,6 +10,13 @@ PiSugar S (Plus) offers an optimized power solution for Raspberry Pi, featuring 
 PiSugar S (Plus) does not support data communication. If you need to get battery status, please use PiSugar 2 or PiSugar 3 series.
 :::
 
+## How To Mount
+
+- Make sure the PiSugarS (Plus) is powered off.
+- Remove the protective film on the screw nuts of the PiSugarS (Plus) board.
+- Align the four screw nuts of the PiSugarS (Plus) board with the Raspberry Pi board (PiSugar board under the RPI), the pogo pins on PiSugarS (Plus) and the RPI's GPIO should be at the same side, and press the RPI board down gently.
+- Use the provided screws to secure the PiSugarS (Plus) board to the Raspberry Pi board.
+
 # Hardware Specifications
 * MicroUSB / TypeC: charging port
 * Power Switch

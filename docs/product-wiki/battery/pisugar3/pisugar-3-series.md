@@ -4,16 +4,22 @@ sidebar_position: 1
 
 # PiSugar3 Series
 
-PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable device. With an standalone MCU, PiSugar3 supports more powerful features. 
+PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable device. With an standalone MCU, PiSugar3 supports more powerful features.
+
+## How To Mount
+
+- Make sure the PiSugar3 (Plus) is powered off.
+- Remove the protective film on the screw nuts of the PiSugar3 (Plus) board.
+- Align the four screw nuts of the PiSugar3 (Plus) board with the Raspberry Pi board (PiSugar board under the RPI), the pogo pins on PiSugar3 (Plus) and the RPI's GPIO should be at the same side, and press the RPI board down gently.
+- Use the provided screws to secure the PiSugar3 (Plus) board to the Raspberry Pi board.
 
 ## Power-On
 
-The PiSugar 3 has the accidental touch prevention feature enabled by default. 
+The PiSugar 3 has the accidental touch prevention feature enabled by default. (The feature switch is on the webUI, Advanced Settings -> Anti-Mistaken Touch Switch)
 
 The default power-on method is to short press and then long press (Click & Hold).
 
 The default power-off method is to long press.
-
 
 ## Software Installation
 
@@ -23,72 +29,75 @@ Run the following script on your pi:
 wget https://cdn.pisugar.com/release/pisugar-power-manager.sh
 bash pisugar-power-manager.sh -c release
 ```
+
 After finished, you can manage the battery by visiting http://\<your raspberry ip\>:8421 in your browser.
 
 <!-- <p>
   <img width="600" src="http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800">
 </p> -->
+
 ![PiSugar logo](http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800)
 
-PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less than 2% pi0 cpu) and exquisite designed webUI. 
+PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less than 2% pi0 cpu) and exquisite designed webUI.
 
 User Guide can be found [here](../pisugar-power-manager).
 
 ## New Features
+
 ### **Full functions UPS**
 
-   PiSugar 3 has full UPS functions and can set up multiple awakening methods to meet various unique project needs.
+PiSugar 3 has full UPS functions and can set up multiple awakening methods to meet various unique project needs.
 
-   PiSugar 3 keeps running/working when external power is connecting or disconnecting to avoid data loss. PiSugar 3 can infer whether the external power supply is powered, whether the external power supply is disconnected, and also the battery voltage status through the data interface. Users can determine if they need to actively shut down for data protection and can set the device to automatically turn on when the external power supply is restored. With the combination of the above functions, the device can keep running as long as possible on the premise of safety.
+PiSugar 3 keeps running/working when external power is connecting or disconnecting to avoid data loss. PiSugar 3 can infer whether the external power supply is powered, whether the external power supply is disconnected, and also the battery voltage status through the data interface. Users can determine if they need to actively shut down for data protection and can set the device to automatically turn on when the external power supply is restored. With the combination of the above functions, the device can keep running as long as possible on the premise of safety.
 
 ### **OTA firmware upgrade**
 
-  A new design based on the feedback of PiSugar2, using independent MCU control to achieve communication and functions. The device firmware can be upgraded without any additional equipment. Only with a simple demand, firmware upgrades can be achieved through Raspberry Pi, letting the device get new features at any time.
+A new design based on the feedback of PiSugar2, using independent MCU control to achieve communication and functions. The device firmware can be upgraded without any additional equipment. Only with a simple demand, firmware upgrades can be achieved through Raspberry Pi, letting the device get new features at any time.
 
-  You can use following command to update the firmware of PiSugar3 (lastest:1.3.4):
-  
+You can use following command to update the firmware of PiSugar3 (lastest:1.3.4):
+
 ```
 curl https://cdn.pisugar.com/release/PiSugarUpdate.sh | sudo bash
 ```
+
 If the device doesn't enter flashing mode after running the script, you can try pressing the reset button located on the PiSugar3's PCB.
 
 ### **Hardware battery protection**
 
-   PiSugar 3 provides hardware battery protection like never before, limiting battery voltage to nearly 80%. When charging protection is turned on, the battery cycles life can be improved.
+PiSugar 3 provides hardware battery protection like never before, limiting battery voltage to nearly 80%. When charging protection is turned on, the battery cycles life can be improved.
 
 ### **I2C control, mutable address**
 
-   PiSugar 3 communicates with the Raspberry Pi through the I2C interface and is compatible with most I2C devices. In addition, the I2C communication address can be customized to avoid I2C address conflicts.
+PiSugar 3 communicates with the Raspberry Pi through the I2C interface and is compatible with most I2C devices. In addition, the I2C communication address can be customized to avoid I2C address conflicts.
 
 ### **Software watchdog**
 
-   PiSugar 3 has a software watchdog function. When the function is turned on, the dog needs to be kicked regularly, which can effectively prevent the Raspberry Pi from crashing and improve the reliability of the system.
+PiSugar 3 has a software watchdog function. When the function is turned on, the dog needs to be kicked regularly, which can effectively prevent the Raspberry Pi from crashing and improve the reliability of the system.
 
 ### **Anti-Mistaken Touch Switch**
 
 Click and hold the power button to turn on/off. This feature can be turn off in software.
 
-
 ## Other Features
 
-* **Back contact, easy to install, does not occupy GPIO**
+- **Back contact, easy to install, does not occupy GPIO**
 
-   PiSugar 3 continues to use the pogo pin design to connect with Raspberry Pi from the back. In this way, it does not occupy the GPIO and is compatible with other GPIO devices.
+  PiSugar 3 continues to use the pogo pin design to connect with Raspberry Pi from the back. In this way, it does not occupy the GPIO and is compatible with other GPIO devices.
 
-* **TypeC charging interface**
+- **TypeC charging interface**
 
-   Both the PiSugar 3 and PiSugar 3 Plus have TypeC charging port. PiSugar3 Plus has an alternative micro-USB charging port.
+  Both the PiSugar 3 and PiSugar 3 Plus have TypeC charging port. PiSugar3 Plus has an alternative micro-USB charging port.
 
-* **Onboard RTC**
+- **Onboard RTC**
 
-   With the ultra-low power consumption design, the onboard RTC can keep the clock running for more than one year when PiSugar is off.
+  With the ultra-low power consumption design, the onboard RTC can keep the clock running for more than one year when PiSugar is off.
 
-* **Soft shutdown**
+- **Soft shutdown**
 
-   Hardware events trigger software shutdown.
+  Hardware events trigger software shutdown.
 
-* **Custom button**
-* **WebUI**
+- **Custom button**
+- **WebUI**
 
 ## Electrical Specifications
 
@@ -102,7 +111,7 @@ Click and hold the power button to turn on/off. This feature can be turn off in 
 
 ## PCB instructions
 
-   **PiSugar3**
+**PiSugar3**
 
 <!-- <p>
   <img width="500" title="PiSugar3" src="https://cdn.pisugar.com/img/PiSugar3-1200mah.jpg?imageView2/0/w/800">
@@ -120,22 +129,21 @@ PiSugar3 PCB
 PiSugar3 Plus PCB
 ![PiSugar3 Plus PCB](https://cdn.pisugar.com/img/PiSugar3-5000mah.jpg?imageView2/0/w/800)
 
+| Position |          Name          |                                                                                                       Description                                                                                                        |
+| :------- | :--------------------: | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+| 1        |          GND           |                                                   PiSugar's GND, 0V, all GNDs are connected, if connected to the Raspberry Pi, also directly to the Raspberry Pi's GND                                                   |
+| 2        |          BAT           |                                                                                                Battery Positive, 3V-4,2V                                                                                                 |
+| 3        |       USB Input        |                                                                                                 Input voltage 4.5V-5.2V                                                                                                  |
+| 4        | Custom function button |                                                                                                                                                                                                                          |
+| 5        |      Power button      |                                                                                                                                                                                                                          |
+| 6        |  System reset button   |                                                                        Use when the hardware is in abnormal state, short press will reset PiSugar                                                                        |
+| 7        |  Extension Interface   | 5V Output, GND, MDAT/MSCL: I2C main interface, no function at this time. SDAT/SSCL: I2C slave interface, connected to Pi's I2C interface. PiSugar3 1.27mm Header (use JST 1.25mm connector). PiSugar3 Plus 2.54mm Header |
+| 8        |      5V Input Pad      |                                                                                            Connect to USB interface 5V input                                                                                             |
+| 9        |   Custom Button Pad    |                                                                               Trigger custom button function when connected to BAT(PAD:2)                                                                                |
+| 10       |    Power Button Pad    |                                                                                Trigger power button function when connected to BAT(PAD:2)                                                                                |
+| 11       |     5V Output Pad      |                                                                               Connected to system 5V output, connected to Raspberry Pi 5V                                                                                |
 
-| Position |          Name          |                                                                Description                                                                |
-| :------- | :--------------------: | :---------------------------------------------------------------------------------------------------------------------------------------: |
-| 1        |          GND           |           PiSugar's GND, 0V, all GNDs are connected, if connected to the Raspberry Pi, also directly to the Raspberry Pi's GND            |
-| 2        |          BAT           |                                                         Battery Positive, 3V-4,2V                                                         |
-| 3        |       USB Input        |                                                          Input voltage 4.5V-5.2V                                                          |
-| 4        | Custom function button |                                                                                                                                           |
-| 5        |      Power button      |                                                                                                                                           |
-| 6        |  System reset button   |                                Use when the hardware is in abnormal state, short press will reset PiSugar                                 |
-| 7        |  Extension Interface   | 5V Output, GND, MDAT/MSCL: I2C main interface, no function at this time. SDAT/SSCL: I2C slave interface, connected to Pi's I2C interface. PiSugar3 1.27mm Header (use JST 1.25mm connector). PiSugar3 Plus 2.54mm Header  |
-| 8        |      5V Input Pad      |                                                     Connect to USB interface 5V input                                                     |
-| 9        |   Custom Button Pad    |                                        Trigger custom button function when connected to BAT(PAD:2)                                        |
-| 10       |    Power Button Pad    |                                        Trigger power button function when connected to BAT(PAD:2)                                         |
-| 11       |     5V Output Pad      |                                        Connected to system 5V output, connected to Raspberry Pi 5V                                        |
-
-* Note: the small round button on the board is for reseting the hardware. It's not an activation button as that on PiSugar 2.
+- Note: the small round button on the board is for reseting the hardware. It's not an activation button as that on PiSugar 2.
 
 ## I2C Datasheet
 
@@ -149,10 +157,9 @@ Basic components (for plus): https://github.com/PiSugar/PiSugar/tree/master/mode
 
 Lids for piHats (for zero): https://github.com/PiSugar/pisugar-case-pihat-cap
 
-
 ## RTC on board
 
-PiSugar 3 have an RTC on board, which can easily use by hwclock. 
+PiSugar 3 have an RTC on board, which can easily use by hwclock.
 
 **Function description**
 
@@ -167,12 +174,13 @@ Take Raspberry Pi OS kernel version: 5.15 as an example, for other system versio
 1. Open I2C port
 2. Upgrade pisugar firmware to the latest version
 3. Write the following to the /boot/config file:
-   
+
    `dtoverlay=i2c-rtc,ds3231`
 
    The modified file should look like this:
 
      <!-- <img width="600" src="https://cdn.pisugar.com/img/config.png"> -->
+
 4. Restart the system
 
 After the above steps, RTC should have been mounted with the system,you can use the following instructions to verify:
@@ -186,14 +194,14 @@ As a result, the UU mark can be seen at 0x68, indicating that it has been occupi
 ```
 pi@PI4B:~ $ i2cdetect -y 1
      0  1  2  3  4  5  6  7  8  9  a  b  c  d  e  f
-00:          -- -- -- -- -- -- -- -- -- -- -- -- -- 
-10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- 
-50: -- -- -- -- -- -- -- 57 -- -- -- -- -- -- -- -- 
-60: -- -- -- -- -- -- -- -- UU -- -- -- -- -- -- -- 
-70: -- -- -- -- -- -- -- --                         
+00:          -- -- -- -- -- -- -- -- -- -- -- -- --
+10: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+20: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+30: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+40: -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --
+50: -- -- -- -- -- -- -- 57 -- -- -- -- -- -- -- --
+60: -- -- -- -- -- -- -- -- UU -- -- -- -- -- -- --
+70: -- -- -- -- -- -- -- --
 ```
 
 Then you can use the hwclock command
@@ -204,7 +212,7 @@ pi@PI4B:~ $ sudo hwclock -r
 pi@PI4B:~ $ sudo hwclock -w
 pi@PI4B:~ $ sudo hwclock -r
 2022-08-31 13:14:31.619253+08:00
-pi@PI4B:~ $ 
+pi@PI4B:~ $
 ```
 
 <!-- Add **Markdown or React** files to `src/pages` to create a **standalone page**:

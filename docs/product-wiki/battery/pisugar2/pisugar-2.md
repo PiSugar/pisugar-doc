@@ -10,6 +10,13 @@ Based on PiSugar1, we added UPS, RTC and I2C features on this version.
 
 #### Note: make sure you are not running any PHAT or other program occupying i2c address 0x75 and 0x32. Writing  unexpected data into this two address will cause damage.
 
+## How To Mount
+
+- Make sure the PiSugar2 is powered off (turn the power switch off).
+- Remove the protective film on the screw nuts of the PiSugar2 board.
+- Align the four screw nuts of the PiSugar2 board with the Raspberry Pi board (PiSugar board under the RPI), the pogo pins on PiSugar2 and the RPI's GPIO should be at the same side, and press the RPI board down gently.
+- Use the provided screws to secure the PiSugar2 board to the Raspberry Pi board.
+
 ## Hardware SPECS
 
 * PowerIC: Injoince IP5209

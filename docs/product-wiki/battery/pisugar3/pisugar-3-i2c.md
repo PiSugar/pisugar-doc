@@ -483,3 +483,27 @@ WebUI supports this function.
    "i2c_addr"= 48,
    
    **Minimum firmware version: 1.0.6**
+
+1. LED Control
+   
+   **Register address:**
+
+   control bit: the 0-3 bit of 0xE0
+
+   **Register operation:**
+
+   can be read or written.
+
+   **Data description:**
+
+   1 is on, 0 is off.
+   
+   **Function description:**
+
+   These four bits directly control the corresponding four LEDs.
+
+   This control is non-exclusive, so it may be necessary to perform refresh writes occasionally to maintain the LED states.
+
+   **WebUI not supports this function**
+
+   **Minimum firmware version: 1.0.0**

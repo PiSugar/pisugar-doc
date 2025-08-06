@@ -12,6 +12,8 @@ Based on PiSugar1, we added UPS, RTC and I2C features on this version.
 
 ## How To Mount
 
+![PiSugar2 Install](http://cdn.pisugar.com/img/pisugar2-install.jpeg?imageView2/0/w/500)
+
 - Make sure the PiSugar2 is powered off (turn the power switch off).
 - Remove the protective film on the screw nuts of the PiSugar2 board.
 - Align the four screw nuts of the PiSugar2 board with the Raspberry Pi board (PiSugar board under the RPI), the pogo pins on PiSugar2 and the RPI's GPIO should be at the same side, and press the RPI board down gently.
@@ -35,20 +37,12 @@ Based on PiSugar1, we added UPS, RTC and I2C features on this version.
 | Communication interface   |  0x75/0x32 address |
 | Size of PCB               |      65mmX30mm     |
 
-## Hardware Installation
-
-<!-- <p>
-  <img width="320" src="http://cdn.pisugar.com/img/pisugar2-install.jpeg?imageView2/0/w/500">
-</p> -->
-![PiSugar2 Install](http://cdn.pisugar.com/img/pisugar2-install.jpeg?imageView2/0/w/500)
-
-
-1. Turn the power switch to off
-2. Attach pi-zero's back to the pin side of PiSugar2
-3. Tighten the four screws (M2.5) from the pi-side
-4. Turn on the power switch and enjoy!
-
 ## Software Installation
+
+<!-- https://cdn.pisugar.com/pisugar-docs/video/pisugar2-software-install.mp4 -->
+<video width="600" controls>
+  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar2-software-install.mp4" type="video/mp4"></source>
+</video>
 
 Run the following script on your pi:
 

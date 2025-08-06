@@ -72,7 +72,7 @@ PiSugar 3 communicates with the Raspberry Pi through the I2C interface and is co
 
 ### **Software watchdog**
 
-PiSugar 3 has a software watchdog function. When the function is turned on, the dog needs to be kicked regularly, which can effectively prevent the Raspberry Pi from crashing and improve the reliability of the system.
+PiSugar 3 has a software watchdog function. When the function is turned on, the dog needs to be fed regularly, which can effectively prevent the Raspberry Pi from crashing and improve the reliability of the system.
 
 ### **Anti-Mistaken Touch Switch**
 

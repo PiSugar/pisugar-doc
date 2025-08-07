@@ -23,12 +23,23 @@ The default power-off method is to long press.
 
 ## Software Installation
 
+<!-- https://cdn.pisugar.com/pisugar-docs/video/pisugar3-software-install.mp4 -->
+<video width="600" controls>
+  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar3-software-install.mp4" type="video/mp4"></source>
+</video>
+
 Run the following script on your pi:
 
 ```
 wget https://cdn.pisugar.com/release/pisugar-power-manager.sh
 bash pisugar-power-manager.sh -c release
 ```
+
+Please select the `PiSugar3` model when prompted.
+
+:::info
+Both PiSugar3 and PiSugar3 Plus should be selected as `PiSugar3` during installation.
+:::
 
 After finished, you can manage the battery by visiting http://\<your raspberry ip\>:8421 in your browser.
 

@@ -10,16 +10,6 @@ So here comes PiSugar2 Plus(Pro), a special PiSugar version for Raspberry Pi 2/3
 
 ![PiSugar2 Pro](https://cdn.pisugar.com/img/pro-3.JPG?imageView2/0/w/800)
 
-## How To Mount
-
-- Turn the power switch to off
-- Attach pi-zero's back to the pin side of PiSugar2 Plus (Pogo pins on PiSugar2 Plus should be at the bottom of the RPI's GPIO)
-- Tighten the four screws (M2.5) from the pi-side
-- If the battery level is low or not indicated, please charge it first
-- Press the `activation button` for 2 seconds
-- Turn on the power switch and enjoy!
-
-
 ## Hardware SPECS
 
 * PowerIC: Injoince IP5312
@@ -53,7 +43,21 @@ So here comes PiSugar2 Plus(Pro), a special PiSugar version for Raspberry Pi 2/3
 * Programmable Button: customize a button function base on your project need
 * 3A Battery Output (Max 6A in Turbo Mode): meet the requirement of rpi 4B and more power consuming scenarios.
 
-## Software Installation (Same as PiSugar2)
+## How To Mount
+
+- Turn the power switch to off
+- Attach pi-zero's back to the pin side of PiSugar2 Plus (Pogo pins on PiSugar2 Plus should be at the bottom of the RPI's GPIO)
+- Tighten the four screws (M2.5) from the pi-side
+- If the battery level is low or not indicated, please charge it first
+- Press the `activation button` for 2 seconds
+- Turn on the power switch and enjoy!
+
+## Software Installation
+
+<!-- https://cdn.pisugar.com/pisugar-docs/video/pisugar2plus-software-install.mp4 -->
+<video width="600" controls>
+  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar2plus-software-install.mp4" type="video/mp4"></source>
+</video>
 
 Run the following script on your pi:
 
@@ -61,6 +65,13 @@ Run the following script on your pi:
 wget https://cdn.pisugar.com/release/pisugar-power-manager.sh
 bash pisugar-power-manager.sh -c release
 ```
+
+Please select the `PiSugar2 Pro` model when prompted.
+
+:::info
+`PiSugar2 Plus` is previously known as `PiSugar2 Pro`. They are the same product with a new name.
+:::
+
 After finished, you can manage the battery by visiting http://\<your raspberry ip\>:8421 in your browser.
 
 <!-- <p>

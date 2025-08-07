@@ -6,9 +6,27 @@ sidebar_position: 4
 
 PiSugar2 is designed for pi-zeros. Compatible with all pi0 series(pi0,pi0w,pi0wh), with/without GPIO headers.
 
-Based on PiSugar1, we added UPS, RTC and I2C features on this version. 
+Based on PiSugar1, we added UPS, RTC and I2C features on this version.
 
-#### Note: make sure you are not running any PHAT or other program occupying i2c address 0x75 and 0x32. Writing  unexpected data into this two address will cause damage.
+#### Note: make sure you are not running any PHAT or other program occupying i2c address 0x75 and 0x32. Writing unexpected data into this two address will cause damage.
+
+## Hardware SPECS
+
+- PowerIC: Injoince IP5209
+- RTC: SD3078
+- MicroUSB: charging port
+- Power Switch
+- Programable Tap Button
+
+## Electrical Specifications
+
+| Electrical Specifications |     PiSugar 3     |
+| :------------------------ | :---------------: |
+| Input                     |     5V-3Amax      |
+| Output                    |    5V-2.5Amax     |
+| Battery capacity          |      1200mah      |
+| Communication interface   | 0x75/0x32 address |
+| Size of PCB               |     65mmX30mm     |
 
 ## How To Mount
 
@@ -18,24 +36,6 @@ Based on PiSugar1, we added UPS, RTC and I2C features on this version.
 - Remove the protective film on the screw nuts of the PiSugar2 board.
 - Align the four screw nuts of the PiSugar2 board with the Raspberry Pi board (PiSugar board under the RPI), the pogo pins on PiSugar2 and the RPI's GPIO should be at the same side, and press the RPI board down gently.
 - Use the provided screws to secure the PiSugar2 board to the Raspberry Pi board.
-
-## Hardware SPECS
-
-* PowerIC: Injoince IP5209
-* RTC: SD3078
-* MicroUSB: charging port
-* Power Switch
-* Programable Tap Button
-
-## Electrical Specifications
-
-| Electrical Specifications |      PiSugar 3     |
-| :------------------------ |  :---------------: |
-| Input                     |     5V-3Amax      |
-| Output                    |     5V-2.5Amax     |
-| Battery capacity          |       1200mah      |
-| Communication interface   |  0x75/0x32 address |
-| Size of PCB               |      65mmX30mm     |
 
 ## Software Installation
 
@@ -50,14 +50,22 @@ Run the following script on your pi:
 wget https://cdn.pisugar.com/release/pisugar-power-manager.sh
 bash pisugar-power-manager.sh -c release
 ```
+
+Please select the `PiSugar2 (2-LEDs)` model when prompted.
+
+:::info
+`PiSugar2 (4-LEDs)` is a early version of PiSugar2, which is discontinued in 2021. If you are using this version, please select `PiSugar2 (4-LEDs)` model when prompted.
+:::
+
 After finished, you can manage the battery by visiting http://\<your raspberry ip\>:8421 in your browser.
 
 <!-- <p>
   <img width="600" src="http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800">
 </p> -->
+
 ![PiSugar2 WebUI](http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800)
 
-PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less than 2% pi0 cpu) and exquisite designed webUI. 
+PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less than 2% pi0 cpu) and exquisite designed webUI.
 
 Distinguish between PiSugar 2 (2-LED) and 4-LED models: https://github.com/PiSugar/PiSugar/wiki/PiSugar-Power-Manager-(Software)#support-model-list
 
@@ -78,7 +86,7 @@ For more details, please refer to: https://github.com/PiSugar/pisugar-power-mana
 
 Please use PiSugar's USB port for charging. If you use pi0's USB port it won't charge PiSugar, and PiSugar will turn off automatically since the external power is enough for pi0 to run.
 
-You can get the charging status from webUI or api. 
+You can get the charging status from webUI or api.
 
 On 4-led version, the charging status is calculated by software, based on whether the battery level is increasing. So when it's 100% then you can't tell if it's connecting to external USB power.
 
@@ -98,16 +106,14 @@ Lids for piHats (for zero): https://github.com/PiSugar/pisugar-case-pihat-cap
 
 ## Extensible
 
-PiSugar2 has some solder pads for developers to debug or add other functions. 
+PiSugar2 has some solder pads for developers to debug or add other functions.
 
-* I2C pads: SDA and SCL, bridge to pi0's i2c-1
-* 5V Input (Qi): for 5V wireless charging or solar charging
-* 5V Output: other usages
+- I2C pads: SDA and SCL, bridge to pi0's i2c-1
+- 5V Input (Qi): for 5V wireless charging or solar charging
+- 5V Output: other usages
 
 ![PiSugar2 Detail](http://cdn.pisugar.com/img/pisugar2-detail.jpg?imageView2/0/w/1000)
-
 
 ## Documents
 
 Please refer to: https://github.com/PiSugar/pisugar-documents
-

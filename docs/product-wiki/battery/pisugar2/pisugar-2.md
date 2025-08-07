@@ -4,19 +4,24 @@ sidebar_position: 4
 
 # PiSugar2
 
-PiSugar2 is designed for pi-zeros. Compatible with all pi0 series(pi0,pi0w,pi0wh), with/without GPIO headers.
+PiSugar2 is a power platform designed for pi-zeros. Compatible with all RPI zero series, with/without GPIO headers.
 
 Based on PiSugar1, we added UPS, RTC and I2C features on this version.
 
-#### Note: make sure you are not running any PHAT or other program occupying i2c address 0x75 and 0x32. Writing unexpected data into this two address will cause damage.
+<img src="/img/pisugar2.jpg" alt="PiSugar 2" width="500"></img>
+
+:::info
+PiSugar2 use I2C address `0x75` and `0x32` to communicate with RPI.
+Make sure you are not running any PHAT or other program occupying i2c address `0x75` and `0x32`. Writing unexpected data into this two address will cause damage.
+:::
 
 ## Hardware SPECS
 
 - PowerIC: Injoince IP5209
 - RTC: SD3078
 - MicroUSB: charging port
-- Power Switch
-- Programable Tap Button
+- Physical Power Switch
+- Programmable Tap Button
 
 ## Electrical Specifications
 
@@ -106,7 +111,7 @@ Lids for piHats (for zero): https://github.com/PiSugar/pisugar-case-pihat-cap
 
 ## Extensible
 
-PiSugar2 has some solder pads for developers to debug or add other functions.
+PiSugar2 has solder pads for developers to debug or add other functions.
 
 - I2C pads: SDA and SCL, bridge to pi0's i2c-1
 - 5V Input (Qi): for 5V wireless charging or solar charging
@@ -114,6 +119,6 @@ PiSugar2 has some solder pads for developers to debug or add other functions.
 
 ![PiSugar2 Detail](http://cdn.pisugar.com/img/pisugar2-detail.jpg?imageView2/0/w/1000)
 
-## Documents
+## Certificate
 
 Please refer to: https://github.com/PiSugar/pisugar-documents

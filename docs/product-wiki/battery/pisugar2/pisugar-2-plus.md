@@ -8,7 +8,12 @@ Building on the success of powering Raspberry Pi Zero, we've applied the same te
 
 So here comes PiSugar2 Plus(Pro), a special PiSugar version for Raspberry Pi 2/3A/3B/3B+/4B. It's designed with the same architecture as PiSugar2, with a bigger size and some additional features.
 
-![PiSugar2 Pro](https://cdn.pisugar.com/img/pro-3.JPG?imageView2/0/w/800)
+<img src="/img/pisugar2plus.jpg" alt="PiSugar 2 Plus" width="500"></img>
+
+:::info
+PiSugar2 Plus use I2C address `0x75` and `0x32` to communicate with RPI.
+Make sure you are not running any PHAT or other program occupying i2c address `0x75` and `0x32`. Writing unexpected data into this two address will cause damage.
+:::
 
 ## Hardware SPECS
 
@@ -17,7 +22,7 @@ So here comes PiSugar2 Plus(Pro), a special PiSugar version for Raspberry Pi 2/3
 * Type-c: charging port, with E-mark support
 * MicroUSB: charging port
 * PH2.0 Battery Plug
-* Power Switch & Turbo Switch
+* Physical Power Switch
 * Programmable Tap Button
 
 ## Electrical Specifications
@@ -114,11 +119,9 @@ Activation process is required by IP5312. once the battery level drop to very lo
 
 ## 3D Printed Case
 
-We now have a case designed for PiSugar2 pro. Please note that it's a beta version.
-
 Please visit https://github.com/PiSugar/PiSugar/tree/master/model_pro
 
-## Documents
+## Certificate
 
 Please refer to: https://github.com/PiSugar/pisugar-documents
 

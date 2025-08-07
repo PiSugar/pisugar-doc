@@ -7,7 +7,7 @@ sidebar_position: 3
 PiSugar S (Plus) offers an optimized power solution for Raspberry Pi, featuring a streamlined design similar to PiSugar 2, while focusing on essential hardware functionality.
 
 <img src="/img/pisugarS.jpg" alt="PiSugar S" width="400"></img>
-<img src="/img/pisugarSPlus.jpg" alt="PiSugar S Plus" width="400"></img>
+<img src="/img/pisugarSplus.jpg" alt="PiSugar S Plus" width="400"></img>
 
 
 :::tip

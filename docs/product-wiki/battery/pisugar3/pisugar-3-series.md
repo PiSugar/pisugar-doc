@@ -6,6 +6,9 @@ sidebar_position: 1
 
 PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable device. With an standalone MCU, PiSugar3 supports more powerful features.
 
+<img src="/img/pisugar3plus.jpg" alt="PiSugar 3 Plus" width="400"></img>
+<img src="/img/pisugar3.jpg" alt="PiSugar 3" width="400"></img>
+
 ## Electrical Specifications
 
 | Electrical Specifications |  PiSugar 3 Plus   |     PiSugar 3     |

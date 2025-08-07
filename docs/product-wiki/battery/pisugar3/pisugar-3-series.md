@@ -68,15 +68,15 @@ User Guide can be found [here](../pisugar-power-manager).
 
 ## Core Features
 
-### **Full functions UPS**
+### Full Functions UPS
 
 PiSugar 3 has full UPS functions and can set up multiple awakening methods to meet various unique project needs.
 
 PiSugar 3 keeps running/working when external power is connecting or disconnecting to avoid data loss. PiSugar 3 can infer whether the external power supply is powered, whether the external power supply is disconnected, and also the battery voltage status through the data interface. Users can determine if they need to actively shut down for data protection and can set the device to automatically turn on when the external power supply is restored. With the combination of the above functions, the device can keep running as long as possible on the premise of safety.
 
-### **OTA firmware upgrade**
+### OTA Firmware Upgrade
 
-A new design based on the feedback of PiSugar2, using independent MCU control to achieve communication and functions. The device firmware can be upgraded without any additional equipment. Only with a simple demand, firmware upgrades can be achieved through Raspberry Pi, letting the device get new features at any time.
+PiSugar3 uses independent MCU control to achieve communication and functions. Only with a simple command, firmware upgrades can be achieved through Raspberry Pi, letting the device get the latest features.
 
 You can use following command to update the firmware of PiSugar3 (lastest:1.3.4):
 
@@ -86,45 +86,50 @@ curl https://cdn.pisugar.com/release/PiSugarUpdate.sh | sudo bash
 
 If the device doesn't enter flashing mode after running the script, you can try pressing the reset button located on the PiSugar3's PCB.
 
-### **Hardware battery protection**
+<!-- https://cdn.pisugar.com/pisugar-docs/video/pisugar3-ota.mp4 -->
+<video width="600" controls>
+  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar3-ota.mp4" type="video/mp4"></source>
+</video>
+
+### Hardware Battery Protection
 
 PiSugar 3 provides hardware battery protection like never before, limiting battery voltage to nearly 80%. When charging protection is turned on, the battery cycles life can be improved.
 
-### **I2C control, mutable address**
+### I2C Control, Mutable Address
 
 PiSugar 3 communicates with the Raspberry Pi through the I2C interface and is compatible with most I2C devices. In addition, the I2C communication address can be customized to avoid I2C address conflicts.
 
-### **Software watchdog**
+### Software Watchdog
 
 PiSugar 3 has a software watchdog function. When the function is turned on, the dog needs to be fed regularly, which can effectively prevent the Raspberry Pi from crashing and improve the reliability of the system.
 
-### **Anti-Mistaken Touch Switch**
+### Anti-Mistaken Touch Switch
 
 Click and hold the power button to turn on/off. This feature can be turn off in software.
 
 ## Other Features
 
-- **Back contact, easy to install, does not occupy GPIO**
+### Back contact, easy to install
 
   PiSugar 3 continues to use the pogo pin design to connect with Raspberry Pi from the back. In this way, it does not occupy the GPIO and is compatible with other GPIO devices.
 
-- **TypeC charging interface**
+### TypeC Charging Interface
 
   Both the PiSugar 3 and PiSugar 3 Plus have TypeC charging port. PiSugar3 Plus has an alternative micro-USB charging port.
 
-- **Onboard RTC**
+### Onboard RTC
 
   With the ultra-low power consumption design, the onboard RTC can keep the clock running for more than one year when PiSugar is off. Please note that the RTC will stop running if the battery is removed.
 
-- **Soft shutdown**
+### Soft Shutdown
 
   Hardware events trigger software shutdown. You can set the shutdown script to execute when the power button is pressed. In this way, you can customize the shutdown process, such as saving data before shutdown.
 
-- **Custom button**
+### Custom Button
 
   PiSugar 3 has a custom button that can be used to trigger custom functions, such as starting a script or sending a signal to the Raspberry Pi.
 
-- **WebUI and APP**
+### WebUI and APP
 
   PiSugar 3 has a webUI and APP to manage the battery, including battery status, charging status, and other information. You can also set the device parameters through the webUI or APP.
 

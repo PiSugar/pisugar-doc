@@ -6,6 +6,16 @@ sidebar_position: 1
 
 PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable device. With an standalone MCU, PiSugar3 supports more powerful features.
 
+## Electrical Specifications
+
+| Electrical Specifications |  PiSugar 3 Plus   |     PiSugar 3     |
+| :------------------------ | :---------------: | :---------------: |
+| Input                     |     5V-3Amax      |     5V-3Amax      |
+| Output                    |     5V-3Amax      |    5V-2.5Amax     |
+| Battery capacity          |      5000mah      |      1200mah      |
+| Communication interface   | 0x57/0x68 address | 0x57/0x68 address |
+| Size of PCB               |     65mmX56mm     |     65mmX30mm     |
+
 ## How To Mount
 
 - Make sure the PiSugar3 (Plus) is powered off.
@@ -53,7 +63,7 @@ PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less 
 
 User Guide can be found [here](../pisugar-power-manager).
 
-## New Features
+## Core Features
 
 ### **Full functions UPS**
 
@@ -101,43 +111,30 @@ Click and hold the power button to turn on/off. This feature can be turn off in 
 
 - **Onboard RTC**
 
-  With the ultra-low power consumption design, the onboard RTC can keep the clock running for more than one year when PiSugar is off.
+  With the ultra-low power consumption design, the onboard RTC can keep the clock running for more than one year when PiSugar is off. Please note that the RTC will stop running if the battery is removed.
 
 - **Soft shutdown**
 
-  Hardware events trigger software shutdown.
+  Hardware events trigger software shutdown. You can set the shutdown script to execute when the power button is pressed. In this way, you can customize the shutdown process, such as saving data before shutdown.
 
 - **Custom button**
-- **WebUI**
 
-## Electrical Specifications
+  PiSugar 3 has a custom button that can be used to trigger custom functions, such as starting a script or sending a signal to the Raspberry Pi.
 
-| Electrical Specifications |  PiSugar 3 Plus   |     PiSugar 3     |
-| :------------------------ | :---------------: | :---------------: |
-| Input                     |     5V-3Amax      |     5V-3Amax      |
-| Output                    |     5V-3Amax      |    5V-2.5Amax     |
-| Battery capacity          |      5000mah      |      1200mah      |
-| Communication interface   | 0x57/0x68 address | 0x57/0x68 address |
-| Size of PCB               |     65mmX56mm     |     65mmX30mm     |
+- **WebUI and APP**
+
+  PiSugar 3 has a webUI and APP to manage the battery, including battery status, charging status, and other information. You can also set the device parameters through the webUI or APP.
 
 ## PCB instructions
 
 **PiSugar3**
 
-<!-- <p>
-  <img width="500" title="PiSugar3" src="https://cdn.pisugar.com/img/PiSugar3-1200mah.jpg?imageView2/0/w/800">
-</p>
-
-   **PiSugar3 Plus**
-
-<p>
-  <img width="500" title="PiSugar3" src="https://cdn.pisugar.com/img/PiSugar3-5000mah.jpg?imageView2/0/w/800">
-</p> -->
-
 PiSugar3 PCB
+
 ![PiSugar3 PCB](https://cdn.pisugar.com/img/PiSugar3-1200mah.jpg?imageView2/0/w/800)
 
 PiSugar3 Plus PCB
+
 ![PiSugar3 Plus PCB](https://cdn.pisugar.com/img/PiSugar3-5000mah.jpg?imageView2/0/w/800)
 
 | Position |          Name          |                                                                                                       Description                                                                                                        |

@@ -17,36 +17,53 @@ Make sure you are not running any PHAT or other program occupying i2c address `0
 
 ## Hardware SPECS
 
-* PowerIC: Injoince IP5312
-* RTC: SD3078
-* Type-c: charging port, with E-mark support
-* MicroUSB: charging port
-* PH2.0 Battery Plug
-* Physical Power Switch
-* Programmable Tap Button
+- PowerIC: Injoince IP5312
+- RTC: SD3078
+- Type-c: charging port, with E-mark support
+- MicroUSB: charging port
+- PH2.0 Battery Plug
+- Physical Power Switch
+- Programmable Tap Button
 
 ## Electrical Specifications
 
 | Electrical Specifications |  PiSugar 2 Plus   |
-| :------------------------ | :---------------: | 
-| Input                     |     5V-3A max      | 
-| Output                    |     5V-3A max      | 
-| Battery capacity          |      5000mah      | 
+| :------------------------ | :---------------: |
+| Input                     |     5V-3A max     |
+| Output                    |     5V-3A max     |
+| Battery capacity          |      5000mah      |
 | Communication interface   | 0x75/0x32 address |
 | Size of PCB               |     65mmX56mm     |
 
 <!-- <p align="left">
   <img width="400" src="http://cdn.pisugar.com/img/pro-1.JPG?imageView2/0/w/800">
 </p> -->
+
 ![PiSugar2 Pro](https://cdn.pisugar.com/img/pro-1.JPG?imageView2/0/w/800)
+
+## Support Raspberry Pi Models
+
+| Raspberry Pi Model | Support         |
+| :----------------- | :-------------- |
+| Raspberry Pi 2     | Yes             |
+| Raspberry Pi 3A    | Yes             |
+| Raspberry Pi 3B    | Yes             |
+| Raspberry Pi 3B+   | Yes             |
+| Raspberry Pi 4B    | Yes             |
+| Raspberry Pi 5B    | Not Supported   |
+
+:::info
+Due to changes in the boot process of Raspberry Pi 5B compared to previous models, PiSugar2 Plus cannot automatically power on the Raspberry Pi 5B after a soft shutdown. That's why we mark it as `Not Supported`.
+If you are using Raspberry Pi 5B, we recommend PiSugar 3 Plus for a better experience.
+:::
 
 ## Features
 
-* Simple Installation: PiSugar style, power from the back!
-* Battery Plug: You can switch lithium battery by your own 
-* I2C Data Abilities: get battery data by api or webUI
-* Programmable Button: customize a button function base on your project need
-* 3A Battery Output (Max 6A in Turbo Mode): meet the requirement of rpi 4B and more power consuming scenarios.
+- Simple Installation: PiSugar style, power from the back!
+- Battery Plug: You can switch lithium battery by your own
+- I2C Data Abilities: get battery data by api or webUI
+- Programmable Button: customize a button function base on your project need
+- 3A Battery Output (Max 6A in Turbo Mode): meet the requirement of rpi 4B and more power consuming scenarios.
 
 ## How To Mount
 
@@ -82,9 +99,10 @@ After finished, you can manage the battery by visiting http://\<your raspberry i
 <!-- <p>
   <img width="600" src="http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800">
 </p> -->
+
 ![PiSugar2 Pro WebUI](https://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800)
 
-PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less than 2% pi0 cpu) and exquisite designed webUI. 
+PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less than 2% pi0 cpu) and exquisite designed webUI.
 
 User Guide can be found [here](../pisugar-power-manager).
 
@@ -124,6 +142,3 @@ Please visit https://github.com/PiSugar/PiSugar/tree/master/model_pro
 ## Certificate
 
 Please refer to: https://github.com/PiSugar/pisugar-documents
-
-
-

@@ -9,6 +9,16 @@ PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable devi
 <img src="/img/pisugar3plus.jpg" alt="PiSugar 3 Plus" width="400"></img>
 <img src="/img/pisugar3.jpg" alt="PiSugar 3" width="400"></img>
 
+## Hardware SPECS
+
+- PowerIC: Standalone MCU
+- RTC: DS3231, stimulated by MCU
+- Type-C: charging port, with E-mark support
+- MicroUSB: charging port
+- Tap Power Button
+- Programmable Tap Button
+- Extension Interface: I2C interface, 5V output
+
 ## Electrical Specifications
 
 | Electrical Specifications |  PiSugar 3 Plus   |     PiSugar 3     |
@@ -18,6 +28,21 @@ PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable devi
 | Battery capacity          |      5000mah      |      1200mah      |
 | Communication interface   | 0x57/0x68 address | 0x57/0x68 address |
 | Size of PCB               |     65mmX56mm     |     65mmX30mm     |
+
+## Support Raspberry Pi Models
+
+| Raspberry Pi Model    | Support | Recommend PiSugar Version |
+| :-------------------- | :------ | :-----------------------: |
+| Raspberry Pi Zero     | Yes     |         PiSugar 3         |
+| Raspberry Pi Zero W   | Yes     |         PiSugar 3         |
+| Raspberry Pi Zero 2   | Yes     |         PiSugar 3         |
+| Raspberry Pi Zero 2 W | Yes     |         PiSugar 3         |
+| Raspberry Pi 2        | Yes     |      PiSugar 3 Plus       |
+| Raspberry Pi 3A       | Yes     |      PiSugar 3 Plus       |
+| Raspberry Pi 3B       | Yes     |      PiSugar 3 Plus       |
+| Raspberry Pi 3B+      | Yes     |      PiSugar 3 Plus       |
+| Raspberry Pi 4B       | Yes     |      PiSugar 3 Plus       |
+| Raspberry Pi 5B       | Yes     |      PiSugar 3 Plus       |
 
 ## How To Mount
 
@@ -111,27 +136,27 @@ Click and hold the power button to turn on/off. This feature can be turn off in 
 
 ### Back contact, easy to install
 
-  PiSugar 3 continues to use the pogo pin design to connect with Raspberry Pi from the back. In this way, it does not occupy the GPIO and is compatible with other GPIO devices.
+PiSugar 3 continues to use the pogo pin design to connect with Raspberry Pi from the back. In this way, it does not occupy the GPIO and is compatible with other GPIO devices.
 
 ### TypeC Charging Interface
 
-  Both the PiSugar 3 and PiSugar 3 Plus have TypeC charging port. PiSugar3 Plus has an alternative micro-USB charging port.
+Both the PiSugar 3 and PiSugar 3 Plus have TypeC charging port. PiSugar3 Plus has an alternative micro-USB charging port.
 
 ### Onboard RTC
 
-  With the ultra-low power consumption design, the onboard RTC can keep the clock running for more than one year when PiSugar is off. Please note that the RTC will stop running if the battery is removed.
+With the ultra-low power consumption design, the onboard RTC can keep the clock running for more than one year when PiSugar is off. Please note that the RTC will stop running if the battery is removed.
 
 ### Soft Shutdown
 
-  Hardware events trigger software shutdown. You can set the shutdown script to execute when the power button is pressed. In this way, you can customize the shutdown process, such as saving data before shutdown.
+Hardware events trigger software shutdown. You can set the shutdown script to execute when the power button is pressed. In this way, you can customize the shutdown process, such as saving data before shutdown.
 
 ### Custom Button
 
-  PiSugar 3 has a custom button that can be used to trigger custom functions, such as starting a script or sending a signal to the Raspberry Pi.
+PiSugar 3 has a custom button that can be used to trigger custom functions, such as starting a script or sending a signal to the Raspberry Pi.
 
 ### WebUI and APP
 
-  PiSugar 3 has a webUI and APP to manage the battery, including battery status, charging status, and other information. You can also set the device parameters through the webUI or APP.
+PiSugar 3 has a webUI and APP to manage the battery, including battery status, charging status, and other information. You can also set the device parameters through the webUI or APP.
 
 ## PCB instructions
 
@@ -231,40 +256,6 @@ pi@PI4B:~ $ sudo hwclock -r
 pi@PI4B:~ $
 ```
 
-<!-- Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+# Certificate
 
-- `src/pages/index.js` → `localhost:3000/`
-- `src/pages/foo.md` → `localhost:3000/foo`
-- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
-
-## Create your first React Page
-
-Create a file at `src/pages/my-react-page.js`:
-
-```jsx title="src/pages/my-react-page.js"
-import React from 'react';
-import Layout from '@theme/Layout';
-
-export default function MyReactPage() {
-  return (
-    <Layout>
-      <h1>My React page</h1>
-      <p>This is a React page</p>
-    </Layout>
-  );
-}
-```
-
-A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
-
-## Create your first Markdown Page
-
-Create a file at `src/pages/my-markdown-page.md`:
-
-```mdx title="src/pages/my-markdown-page.md"
-# My Markdown page
-
-This is a Markdown page
-```
-
-A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page). -->
+Please refer to: https://github.com/PiSugar/pisugar-documents

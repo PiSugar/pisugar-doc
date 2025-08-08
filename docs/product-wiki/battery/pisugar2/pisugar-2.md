@@ -33,6 +33,15 @@ Make sure you are not running any PHAT or other program occupying i2c address `0
 | Communication interface   | 0x75/0x32 address |
 | Size of PCB               |     65mmX30mm     |
 
+## Support Raspberry Pi Models
+
+| Raspberry Pi Model    | Support |
+| :-------------------- | :------ |
+| Raspberry Pi Zero     | Yes     |
+| Raspberry Pi Zero W   | Yes     |
+| Raspberry Pi Zero 2   | Yes     |
+| Raspberry Pi Zero 2 W | Yes     |
+
 ## How To Mount
 
 ![PiSugar2 Install](http://cdn.pisugar.com/img/pisugar2-install.jpeg?imageView2/0/w/500)

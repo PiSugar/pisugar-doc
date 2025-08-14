@@ -39,7 +39,7 @@ Make sure you are not running any PHAT or other program occupying i2c address `0
   <img width="400" src="http://cdn.pisugar.com/img/pro-1.JPG?imageView2/0/w/800">
 </p> -->
 
-![PiSugar2 Pro](https://cdn.pisugar.com/img/pro-1.JPG?imageView2/0/w/800)
+![PiSugar2 Pro](https://cdn.pisugar.com/img/pro-1.JPG?imageView2/0/w/600)
 
 ## Support Raspberry Pi Models
 
@@ -67,11 +67,17 @@ If you are using Raspberry Pi 5B, we recommend PiSugar 3 Plus for a better exper
 
 ## How To Mount
 
+<video width="600" controls>
+  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisuga2plus-hardware-install.mp4" type="video/mp4"></source>
+</video>
+
+### Mounting Steps
+
 - Turn the power switch to off
 - Attach pi-zero's back to the pin side of PiSugar2 Plus (Pogo pins on PiSugar2 Plus should be at the bottom of the RPI's GPIO)
 - Tighten the four screws (M2.5) from the pi-side
 - If the battery level is low or not indicated, please charge it first
-- Press the `activation button` for 2 seconds
+- Press the `activation button` for 2 seconds (required if the battery was drained or unplugged)
 - Turn on the power switch and enjoy!
 
 ## Software Installation

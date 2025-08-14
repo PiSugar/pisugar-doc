@@ -44,7 +44,11 @@ Make sure you are not running any PHAT or other program occupying i2c address `0
 
 ## How To Mount
 
-![PiSugar2 Install](http://cdn.pisugar.com/img/pisugar2-install.jpeg?imageView2/0/w/500)
+<video width="600" controls>
+  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar2-hardware-install.mp4" type="video/mp4"></source>
+</video>
+
+### Mounting Steps
 
 - Make sure the PiSugar2 is powered off (turn the power switch off).
 - Remove the protective film on the screw nuts of the PiSugar2 board.

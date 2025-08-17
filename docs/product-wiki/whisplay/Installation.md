@@ -1,5 +1,141 @@
----
-sidebar_position: 1
----
+# Whisplay HAT - PiSugar Wiki
 
-# Installation
+## Product Introduction
+
+  - **Foreword**
+
+      - Product overview (Audio module designed for Raspberry Pi, using WM8960 low-power stereo codec, etc.)
+
+  - **Product Features**
+
+      - Power supply voltage: 5V
+      - Logic voltage: 3.3V
+      - Audio codec chip: WM8960
+      - Audio control interface: I2C
+      - Audio data interface: I2S
+      - Speaker power: 8Ω1W
+      - Audio data interface: I2S
+      - Screen size: 1.69 inches (30mm\*37mm)
+      - Screen resolution: 240\*280RGB
+      - Screen controller chip: ST7789
+      - Screen interface: 4-SPI
+
+## Hardware Resources
+
+  - **Pin Function and Raspberry Pi Pin (Physical Pin Number) Correspondence**
+
+| Pin Function | Pin Number | Pin Function | Pin Number | Pin Function | Pin Number | Pin Function | Pin Number |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **5V** | P2, P4 | **LED1** | P22 | **LCDCTRL** | P15 | **I2SWS** | P35 |
+|**GND** |GND | **LED2** | P18 | **SPI\_RST** | P7 | **I2SDIN** | P38 |
+| **I2CDAT** | P3 | **LED3** | P16 | **SPI\_DC** | P13 | **I2SDOUT** | P40 |
+| **I2CCLK** | P5 | | | **SPI\_MOSI** | P19 | | |
+| **KEY** | P11 | | | **SPI\_CLK** | P23 | | |
+| | | | | **SPI\_CS** | P24 | | |
+
+## Raspberry Pi Usage Instructions
+
+Refer to the github link: [https://github.com/PiSugar/Whisplay](https://github.com/PiSugar/Whisplay)
+
+### Audio Function
+
+  - **Installation**
+
+    After cloning the github project, navigate to the Driver directory and use the script to install.
+
+    ```
+    git clone https://github.com/PiSugar/Whisplay.git
+    cd Whisplay/Driver
+    sudo bash install_wm8960_drive.sh
+    sudo reboot
+    ```
+
+  - **Sound Card Detection**
+
+      - Check playback: `aplay -l`
+
+        ```
+        aplay -l
+        ```
+
+      - Check recording: `arecord -l`
+
+        ```
+        arecord -l
+        ```
+
+    Note that the sound card number may vary on different systems and hardware. In the example, the sound card number is 2, and this number should be used in subsequent commands.
+
+  - **Recording and Playback Test**
+
+      - Recording and playback test
+
+        `sudo arecord -f cd -Dhw:0 | aplay -Dhw:0`
+
+      - Recording
+
+        `sudo arecord -D hw:0,0 -f S32_LE -r 16000 -c 2 test.wav`
+
+      - Playback
+
+        `sudo aplay -Dhw:0 test.wav`
+
+      - Graphical smplayer
+
+        The system provides a graphical interface to set more complex functions. You need to press F6 to select the sound card device, and the sound card name is wm8960.
+
+        The default volume is relatively low; it can be adjusted up to around 70, beyond which it will cause distortion.
+
+        `sudo alsamixer`
+
+### Display and Other Functions
+
+LCD, RGBLED, and buttons are controlled by python, and all functions have been integrated into the Driver.
+
+  - **Test Program 1**
+
+    Navigate to the example directory and run the test program.
+
+    ```python
+    cd Whisplay/example
+    python test.py
+    #python test.py test1.jpg
+    ```
+
+  - **Test Program 2**
+
+    The test code completes a function that receives text via socket and displays it, and also notifies the status of the buttons. It can be used as a display interface for an AI chatbot.
+
+      - Start the server
+
+    <!-- end list -->
+
+    ```
+    cd example
+    python chatbot-ui.py
+    ```
+
+    The program will continuously listen on port 12345. After a client connects, it can send display information and receive button status.
+
+      - Test UI
+
+    <!-- end list -->
+
+    ```
+    python sockettest.py
+    ```
+
+    After running sockettest.py, click the button, and the content displayed on the LCD will change randomly.
+
+## Technical Support
+
+### Documents
+
+  - Schematic [Schematic](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/Whisplay.pdf)
+  - 3D model [3D model](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/WhisPlay.step)
+  - WM8960 Technical Manual [WM8960 Technical Manual](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/WM8960_v4.2.pdf)
+  - Screen Technical Manual and Source Code [Screen Technical Manual and Source Code](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/1.69LCD.zip)
+
+### Contact Information
+
+  - **EMAIL**: pisugar.zero@gmail.com

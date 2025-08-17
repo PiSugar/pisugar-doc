@@ -24,6 +24,8 @@
 
   - **Pin Function and Raspberry Pi Pin (Physical Pin Number) Correspondence**
 
+<img src="https://github.com/PiSugar/pisugar-doc/blob/main/static/img/Whisplay_GPIO.jpg" width="20%">
+ 
 | Pin Function | Pin Number | Pin Function | Pin Number | Pin Function | Pin Number | Pin Function | Pin Number |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **5V** | P2, P4 | **LED1** | P22 | **LCDCTRL** | P15 | **I2SWS** | P35 |
@@ -53,40 +55,56 @@ Refer to the github link: [https://github.com/PiSugar/Whisplay](https://github.c
   - **Sound Card Detection**
 
       - Check playback: `aplay -l`
-
-        ```
-        aplay -l
+        
+        ```shell
+        pi@PI0WH:~ $ aplay -l
+        **** List of PLAYBACK Hardware Devices ****
+        card 0: vc4hdmi [vc4-hdmi], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+          Subdevices: 1/1
+          Subdevice #0: subdevice #0
+        card 1: wm8960soundcard [wm8960-soundcard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 [bcm2835-i2s-wm8960-hifi wm8960-hifi-0]
+          Subdevices: 1/1
+          Subdevice #0: subdevice #0
         ```
 
       - Check recording: `arecord -l`
-
+        
+        ```shell
+        pi@PI0WH:~ $ arecord -l
+        **** List of CAPTURE Hardware Devices ****
+        card 1: wm8960soundcard [wm8960-soundcard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 [bcm2835-i2s-wm8960-hifi wm8960-hifi-0]
+          Subdevices: 1/1
+          Subdevice #0: subdevice #0
         ```
-        arecord -l
-        ```
 
-    Note that the sound card number may vary on different systems and hardware. In the example, the sound card number is 2, and this number should be used in subsequent commands.
+    Note that the sound card number may vary on different systems and hardware. In the example, the sound card number is 1, and this number should be used in subsequent commands.
 
   - **Recording and Playback Test**
 
       - Recording and playback test
 
-        `sudo arecord -f cd -Dhw:0 | aplay -Dhw:0`
+        `sudo arecord -f cd -Dhw:1 | aplay -Dhw:1`
 
       - Recording
 
-        `sudo arecord -D hw:0,0 -f S32_LE -r 16000 -c 2 test.wav`
+        `sudo arecord -D hw:1,0 -f S32_LE -r 16000 -c 2 test.wav`
 
       - Playback
 
-        `sudo aplay -Dhw:0 test.wav`
+        `sudo aplay -Dhw:1 test.wav`
 
       - Graphical smplayer
 
         The system provides a graphical interface to set more complex functions. You need to press F6 to select the sound card device, and the sound card name is wm8960.
 
-        The default volume is relatively low; it can be adjusted up to around 70, beyond which it will cause distortion.
 
         `sudo alsamixer`
+        
+        <img src="https://github.com/PiSugar/pisugar-doc/blob/main/static/img/soundcardchoice.png" width="50%">
+
+        The default volume is relatively low; it can be adjusted up to around 70, beyond which it will cause distortion.
+
+        <img src="https://github.com/PiSugar/pisugar-doc/blob/main/static/img/soundcardconfig.png" width="80%">
 
 ### Display and Other Functions
 

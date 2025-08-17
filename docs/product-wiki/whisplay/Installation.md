@@ -38,6 +38,7 @@
 ## Raspberry Pi Usage Instructions
 
 Refer to the github link: [https://github.com/PiSugar/Whisplay](https://github.com/PiSugar/Whisplay)
+For now, only support the latest official Raspberry Pi OS, not the Lite version.
 
 ### Audio Function
 

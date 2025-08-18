@@ -4,7 +4,7 @@ sidebar_position: 1
 
 # Product Overview
 
-Product overview (Audio and display module designed for Raspberry Pi, using WM8960 low-power stereo codec, etc.)
+**PiSugar Whisplay HAT** is a multifunctional expansion board for Raspberry Pi Zero, integrating a display, microphones, speakers, and more to turn it into a portable interactive device.
 
 ### Product Features
 
@@ -14,7 +14,6 @@ Product overview (Audio and display module designed for Raspberry Pi, using WM89
 - Audio control interface: I2C
 - Audio data interface: I2S
 - Speaker power: 8Ω1W
-- Audio data interface: I2S
 - Screen size: 1.69 inches (30mm\*37mm)
 - Screen resolution: 240\*280RGB
 - Screen controller chip: ST7789

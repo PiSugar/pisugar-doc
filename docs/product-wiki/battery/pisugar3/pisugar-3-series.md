@@ -47,6 +47,18 @@ PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable devi
 
 ## How To Mount
 
+PiSugar3 Plus:
+<video width="600" controls>
+  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar3plus-hardware-install.mp4" type="video/mp4"></source>
+</video>
+
+PiSugar3:
+<video width="600" controls>
+  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar3-hardware-install.mp4" type="video/mp4"></source>
+</video>
+
+### Mounting Steps
+
 - Make sure the PiSugar3 (Plus) is powered off.
 - Remove the protective film on the screw nuts of the PiSugar3 (Plus) board.
 - Align the four screw nuts of the PiSugar3 (Plus) board with the Raspberry Pi board (PiSugar board under the RPI), the pogo pins on PiSugar3 (Plus) and the RPI's GPIO should be at the same side, and press the RPI board down gently.
@@ -54,9 +66,9 @@ PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable devi
 
 ## Power-On
 
-The PiSugar 3 has the accidental touch prevention feature enabled by default. (The feature switch is on the webUI, Advanced Settings -> Anti-Mistaken Touch Switch)
+The PiSugar 3 has the `Anti-mistaken Touch` feature enabled by default. (The feature switch is on the webUI, Advanced Settings -> Anti-Mistaken Touch Switch)
 
-The default power-on method is to short press and then long press (Click & Hold).
+The default power-on method is to short press and then long press (Click & Hold), wait for the LEDs count from 1 to 4.
 
 The default power-off method is to long press.
 

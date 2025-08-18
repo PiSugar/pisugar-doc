@@ -57,6 +57,19 @@ If you are using Raspberry Pi 5B, we recommend PiSugar 3 Plus for a better exper
 
 ## How To Mount
 
+PiSugar S
+
+<video width="600" controls>
+  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugars-hardware-install.mp4" type="video/mp4"></source>
+</video>
+
+PiSugar S Plus
+<video width="600" controls>
+  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugarsplus-hardware-install.mp4" type="video/mp4"></source>
+</video>
+
+### Mounting Steps
+
 - Make sure the PiSugarS (Plus) is powered off.
 - Remove the protective film on the screw nuts of the PiSugarS (Plus) board.
 - Align the four screw nuts of the PiSugarS (Plus) board with the Raspberry Pi board (PiSugar board under the RPI), the pogo pins on PiSugarS (Plus) and the RPI's GPIO should be at the same side, and press the RPI board down gently.

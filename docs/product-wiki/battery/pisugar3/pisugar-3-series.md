@@ -14,7 +14,8 @@ PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable devi
 - PowerIC: Standalone MCU
 - RTC: DS3231, stimulated by MCU
 - Type-C: charging port, with E-mark support
-- MicroUSB: charging port
+- MicroUSB: charging port (Only for PiSugar3 Plus)
+- PH2.0 Battery Plug (Only for PiSugar3 Plus)
 - Tap Power Button
 - Programmable Tap Button
 - Extension Interface: I2C interface, 5V output

@@ -42,10 +42,10 @@ To measure the battery curve, you can use the following steps:
 ```json
 {
   "battery_curve": [
-    [3.3, 10], 
-    [3.5, 60], 
-    [4.0, 90],
-    [4.2, 100]
+    [4.2, 100] 
+    [4.0, 90], 
+    [3.5, 60],
+    [3.3, 10],
   ]
 }
 ```

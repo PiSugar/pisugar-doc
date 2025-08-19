@@ -37,7 +37,7 @@ To measure the battery curve, you can use the following steps:
 3. Let it discharge continuously until the battery is depleted and the system shuts down.
 4. Extract data points from the recorded time and voltage measurements.
 5. Calculate the estimated battery percentage corresponding to each voltage level.
-6. Write these values into the JSON configuration `/etc/pisugar/config.json`. (add the `battery_curve` key if it doesn't exist)
+6. Write these values into the JSON configuration `/etc/pisugar-server/config.json`. (add the `battery_curve` key if it doesn't exist)
 
 ```json
 {

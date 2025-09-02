@@ -45,7 +45,7 @@ Make sure you are not running any PHAT or other program occupying i2c address `0
 ## How To Mount
 
 <video width="600" controls>
-  <source src="https://doc-resourses.pisugar.uk/pisugar2-hardware-install.mp4" type="video/mp4"></source>
+  <source src="https://docs.pisugar.com/assets/video/pisugar2-hardware-install.mp4" type="video/mp4"></source>
 </video>
 
 ### Mounting Steps
@@ -58,7 +58,7 @@ Make sure you are not running any PHAT or other program occupying i2c address `0
 ## Software Installation
 
 <video width="600" controls>
-  <source src="https://doc-resourses.pisugar.uk/PiSugar2_install.mp4" type="video/mp4"></source>
+  <source src="https://docs.pisugar.com/assets/video/PiSugar2_install.mp4" type="video/mp4"></source>
 </video>
 
 Run the following script on your pi:

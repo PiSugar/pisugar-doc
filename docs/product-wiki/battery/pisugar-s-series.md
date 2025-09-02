@@ -60,12 +60,12 @@ If you are using Raspberry Pi 5B, we recommend PiSugar 3 Plus for a better exper
 PiSugar S
 
 <video width="600" controls>
-  <source src="https://docs.pisugar.com/assets/video/pisugars-hardware-install.mp4" type="video/mp4"></source>
+  <source src="https://doc-videos.pisugar.uk/pisugars-hardware-install.mp4" type="video/mp4"></source>
 </video>
 
 PiSugar S Plus
 <video width="600" controls>
-  <source src="https://docs.pisugar.com/assets/video/pisugarsplus-hardware-install.mp4" type="video/mp4"></source>
+  <source src="https://doc-videos.pisugar.uk/pisugarsplus-hardware-install.mp4" type="video/mp4"></source>
 </video>
 
 ### Mounting Steps

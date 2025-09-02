@@ -68,7 +68,7 @@ If you are using Raspberry Pi 5B, we recommend PiSugar 3 Plus for a better exper
 ## How To Mount
 
 <video width="600" controls>
-  <source src="https://docs.pisugar.com/assets/video/PiSugar2Plus_install.mp4" type="video/mp4"></source>
+  <source src="https://doc-videos.pisugar.uk/PiSugar2Plus_install.mp4" type="video/mp4"></source>
 </video>
 
 ### Mounting Steps
@@ -83,7 +83,7 @@ If you are using Raspberry Pi 5B, we recommend PiSugar 3 Plus for a better exper
 ## Software Installation
 
 <video width="600" controls>
-  <source src="https://docs.pisugar.com/assets/video/pisugar2plus-software-install.mp4" type="video/mp4"></source>
+  <source src="https://doc-videos.pisugar.uk/pisugar2plus-software-install.mp4" type="video/mp4"></source>
 </video>
 
 Run the following script on your pi:

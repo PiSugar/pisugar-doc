@@ -49,12 +49,12 @@ PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable devi
 
 PiSugar3 Plus:
 <video width="600" controls>
-  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar3plus-hardware-install.mp4" type="video/mp4"></source>
+  <source src="https://doc-resourses.pisugar.uk/pisugar3plus-install.mp4" type="video/mp4"></source>
 </video>
 
 PiSugar3:
 <video width="600" controls>
-  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar3-hardware-install.mp4" type="video/mp4"></source>
+  <source src="https://doc-resourses.pisugar.uk/pisugar3-install.mp4" type="video/mp4"></source>
 </video>
 
 ### Mounting Steps
@@ -74,9 +74,8 @@ The default power-off method is to long press.
 
 ## Software Installation
 
-<!-- https://cdn.pisugar.com/pisugar-docs/video/pisugar3-software-install.mp4 -->
 <video width="600" controls>
-  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar3-software-install.mp4" type="video/mp4"></source>
+  <source src="https://doc-resourses.pisugar.uk/pisugar3-software-install.mp4" type="video/mp4"></source>
 </video>
 
 Run the following script on your pi:
@@ -93,10 +92,6 @@ Both PiSugar3 and PiSugar3 Plus should be selected as `PiSugar3` during installa
 :::
 
 After finished, you can manage the battery by visiting http://\<your raspberry ip\>:8421 in your browser.
-
-<!-- <p>
-  <img width="600" src="http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800">
-</p> -->
 
 ![PiSugar logo](http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800)
 
@@ -126,7 +121,7 @@ If the device doesn't enter flashing mode after running the script, you can try 
 
 <!-- https://cdn.pisugar.com/pisugar-docs/video/pisugar3-ota.mp4 -->
 <video width="600" controls>
-  <source src="https://cdn.pisugar.com/pisugar-docs/video/pisugar3-ota.mp4" type="video/mp4"></source>
+  <source src="https://doc-resourses.pisugar.uk/pisugar3-ota.mp4" type="video/mp4"></source>
 </video>
 
 ### Hardware Battery Protection

@@ -6,9 +6,10 @@
 // https://doc-resourses.pisugar.uk/pisugar2plus-software-install.mp4
 // https://doc-resourses.pisugar.uk/pisugar3plus-install.mp4
 // https://doc-resourses.pisugar.uk/pisugar3-install.mp4
+// https://doc-resourses.pisugar.uk/pisugar3-software-install.mp4
+// https://doc-resourses.pisugar.uk/pisugar3-ota.mp4
 // https://doc-resourses.pisugar.uk/pisugars-hardware-install.mp4
 // https://doc-resourses.pisugar.uk/pisugarsplus-hardware-install.mp4
-// https://doc-resourses.pisugar.uk/pisugar3-ota.mp4
 
 const fs = require('fs');
 const https = require('https');
@@ -27,10 +28,11 @@ const videoUrls = [
   'https://doc-resourses.pisugar.uk/PiSugar2Plus_install.mp4',
   'https://doc-resourses.pisugar.uk/pisugar2plus-software-install.mp4',
   'https://doc-resourses.pisugar.uk/pisugar3plus-install.mp4',
+  'https://doc-resourses.pisugar.uk/pisugar3-software-install.mp4',
+  'https://doc-resourses.pisugar.uk/pisugar3-ota.mp4',
   'https://doc-resourses.pisugar.uk/pisugar3-install.mp4',
   'https://doc-resourses.pisugar.uk/pisugars-hardware-install.mp4',
   'https://doc-resourses.pisugar.uk/pisugarsplus-hardware-install.mp4',
-  'https://doc-resourses.pisugar.uk/pisugar3-ota.mp4'
 ];
 
 // Download function

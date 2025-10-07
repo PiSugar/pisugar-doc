@@ -68,6 +68,8 @@ PiSugar3:
 
 The PiSugar 3 has the `Anti-mistaken Touch` feature enabled by default. (The feature switch is on the webUI, Advanced Settings -> Anti-Mistaken Touch Switch)
 
+<img src="/img/pisugar3plus_antimistouch.gif" alt="PiSugar 3 antimistouch" width="400"></img>
+
 The default power-on method is to short press and then long press (Click & Hold), wait for the LEDs count from 1 to 4.
 
 The default power-off method is to long press.

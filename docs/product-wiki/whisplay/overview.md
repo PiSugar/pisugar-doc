@@ -82,12 +82,6 @@ Note that the sound card number may vary on different systems and hardware. In t
 
 #### Recording and Playback Test
 
-Recording and playback test
-
-```bash
-sudo arecord -f cd -Dhw:1 | aplay -Dhw:1
-```
-
 Recording
 
 ```
@@ -124,7 +118,7 @@ Navigate to the example directory and run the test program.
 
 ```python
 cd Whisplay/example
-python test.py
+sudo python test.py
 #python test.py test1.jpg
 ```
 

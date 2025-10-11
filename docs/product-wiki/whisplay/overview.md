@@ -115,7 +115,9 @@ The default volume is relatively low; it can be adjusted up to around 70, beyond
 
 ### Display and Other Functions
 
-LCD, RGB LED, and buttons are controlled by python, and all functions have been integrated into the Driver.
+The LCD, RGB LED, and buttons are all controlled by Python, with all functionalities integrated into the Driver.
+
+Please note that the audio component has been installed as a system sound card and is not included in the Driver. You should use the audio functionality as a standard system sound card.
 
 #### Test Program 1
 
@@ -124,7 +126,7 @@ Navigate to the example directory and run the test program.
 ```python
 cd Whisplay/example
 sudo python test.py
-#python test.py test1.jpg
+#sudo python test.py --image test.jpg --sound test.mp3
 ```
 
 #### Test Program 2

@@ -34,6 +34,11 @@ sidebar_position: 1
 | **KEY**      | P11        |              |            | **SPI_CLK**  | P23        |              |            |
 |              |            |              |            | **SPI_CS**   | P24        |              |            |
 
+## External Speaker Support
+
+Whisplay allows for enhanced audio flexibility. Easily switch to an external speaker using the dedicated control.
+
+Note: Compatible speakers must be single-channel (mono) and utilize an XH2.0 connector. 
 ## Raspberry Pi Usage Instructions
 
 Refer to the github link: [https://github.com/PiSugar/Whisplay](https://github.com/PiSugar/Whisplay)
@@ -82,12 +87,6 @@ Note that the sound card number may vary on different systems and hardware. In t
 
 #### Recording and Playback Test
 
-Recording and playback test
-
-```bash
-sudo arecord -f cd -Dhw:1 | aplay -Dhw:1
-```
-
 Recording
 
 ```
@@ -116,7 +115,9 @@ The default volume is relatively low; it can be adjusted up to around 70, beyond
 
 ### Display and Other Functions
 
-LCD, RGB LED, and buttons are controlled by python, and all functions have been integrated into the Driver.
+The LCD, RGB LED, and buttons are all controlled by Python, with all functionalities integrated into the Driver.
+
+Please note that the audio component has been installed as a system sound card and is not included in the Driver. You should use the audio functionality as a standard system sound card.
 
 #### Test Program 1
 
@@ -124,8 +125,8 @@ Navigate to the example directory and run the test program.
 
 ```python
 cd Whisplay/example
-python test.py
-#python test.py test1.jpg
+sudo python test.py
+#sudo python test.py --image test.jpg --sound test.mp3
 ```
 
 #### Test Program 2

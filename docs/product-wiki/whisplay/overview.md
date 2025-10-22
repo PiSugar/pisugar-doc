@@ -47,7 +47,7 @@ For now, Whisplay driver only support the latest official Raspberry Pi OS (not i
 After cloning the github project, navigate to the Driver directory and use the script to install.
 
 ```bash
-git clone https://github.com/PiSugar/Whisplay.git
+git clone https://github.com/PiSugar/Whisplay.git --depth 1
 cd Whisplay/Driver
 sudo bash install_wm8960_drive.sh
 sudo reboot

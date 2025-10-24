@@ -34,11 +34,14 @@ sidebar_position: 1
 | **KEY**      | P11        |              |            | **SPI_CLK**  | P23        |              |            |
 |              |            |              |            | **SPI_CS**   | P24        |              |            |
 
+
 ## External Speaker Support
+<img src="/img/whisplay-diagram.jpg" width="900px"></img>
 
 Whisplay allows for enhanced audio flexibility. Easily switch to an external speaker using the dedicated control.
 
 Note: Compatible speakers must be single-channel (mono) and utilize an XH2.0 connector. 
+
 ## Raspberry Pi Usage Instructions
 
 Refer to the github link: [https://github.com/PiSugar/Whisplay](https://github.com/PiSugar/Whisplay)

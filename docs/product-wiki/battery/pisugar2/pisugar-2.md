@@ -111,6 +111,20 @@ On 4-led version, the charging status is calculated by software, based on whethe
 
 If you use schedule wake up function, please keep the power switch ON. The battery will turn off as the pi shutdown. The RTC will wake up the battery and the pi at the time you set.
 
+## Customizing Power Switch
+
+:::warning
+Customizing power switch feature will void the warranty. Please proceed with caution and ensure you understand the implications of modifying the power switch behavior.
+:::
+
+If you need to connect your own external power switch, you must remove the original power switch and solder to the three pins of the original switch.
+
+<img src="/img/pisugar2_switch.jpg" alt="PiSugar 2 Plus Switch Pins" width="400"></img>
+
+The three pins are: ON, CTRL, OFF.
+- When ON and CTRL are shorted, the power is ON.
+- When OFF and CTRL are shorted, the power is OFF.
+
 ## 3D Printed Case
 
 We are developing 3D models based on the PiSugar1. Except the shell part, the other parts will remain the same will PiSugar1, as well as the phat lids.

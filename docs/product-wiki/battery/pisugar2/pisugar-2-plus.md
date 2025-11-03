@@ -140,6 +140,20 @@ If you use schedule wake up function, please keep the power switch ON. The batte
 
 Activation process is required by IP5312. once the battery level drop to very low or the battery is unplugged, you need to activate it in the next time when you plugin the battery or start charging. Plugin the USB Charging Port and click the circle button (near the tap button) to activate.
 
+## Customizing Power Switch
+
+:::warning
+Customizing power switch feature will void the warranty. Please proceed with caution and ensure you understand the implications of modifying the power switch behavior.
+:::
+
+If you need to connect your own external power switch, you must remove the original power switch and solder to the three pins of the original switch.
+
+<img src="/img/pisugar2_switch.jpg" alt="PiSugar 2 Plus Switch Pins" width="400"></img>
+
+The three pins are: ON, CTRL, OFF.
+- When ON and CTRL are shorted, the power is ON.
+- When OFF and CTRL are shorted, the power is OFF.
+
 ## 3D Printed Case
 
 Please visit https://github.com/PiSugar/PiSugar/tree/master/model_pro

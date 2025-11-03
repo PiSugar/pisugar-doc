@@ -50,11 +50,11 @@ Make sure you are not running any PHAT or other program occupying i2c address `0
 | Raspberry Pi 3B    | Yes             |
 | Raspberry Pi 3B+   | Yes             |
 | Raspberry Pi 4B    | Yes             |
-| Raspberry Pi 5B    | Not Supported   |
+| Raspberry Pi 5     | Not Supported   |
 
 :::info
-Due to changes in the boot process of Raspberry Pi 5B compared to previous models, PiSugar2 Plus cannot automatically power on the Raspberry Pi 5B after a soft shutdown. That's why we mark it as `Not Supported`.
-If you are using Raspberry Pi 5B, we recommend PiSugar 3 Plus for a better experience.
+Due to changes in the boot process of Raspberry Pi 5 compared to previous models, PiSugar2 Plus cannot automatically power on the Raspberry Pi 5 after a soft shutdown. That's why we mark it as `Not Supported`.
+If you are using Raspberry Pi 5, we recommend PiSugar 3 Plus for a better experience.
 :::
 
 ## Features

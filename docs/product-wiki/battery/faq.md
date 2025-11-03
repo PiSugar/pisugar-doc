@@ -13,7 +13,7 @@ You can gently scrape the solder points with a plastic tool to ensure a clean co
 <!-- <img src="https://github.com/user-attachments/assets/d23c22bb-ca92-4b91-8f3b-75fd98985892" width="500"> -->
 ![PiSugar Installation](https://github.com/user-attachments/assets/d23c22bb-ca92-4b91-8f3b-75fd98985892)
 
-### 2. Can the PiSugar be used together with the official Raspberry Pi 5B Active Cooler?
+### 2. Can the PiSugar be used together with the official Raspberry Pi 5 Active Cooler?
 
 Yes, it can. However, the mounting clips of the Active Cooler pass through the Raspberry Pi PCB and occupy some space at the bottom, which can interfere with the installation of the PiSugar. You simply need to modify the mounting clips as shown in the diagram, gently spread the legs of the plastic fasteners outwards, which allows for proper assembly of PiSugar.
 

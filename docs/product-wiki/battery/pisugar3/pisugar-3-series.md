@@ -43,7 +43,7 @@ PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable devi
 | Raspberry Pi 3B       | Yes     |      PiSugar 3 Plus       |
 | Raspberry Pi 3B+      | Yes     |      PiSugar 3 Plus       |
 | Raspberry Pi 4B       | Yes     |      PiSugar 3 Plus       |
-| Raspberry Pi 5B       | Yes     |      PiSugar 3 Plus       |
+| Raspberry Pi 5        | Yes     |      PiSugar 3 Plus       |
 
 ## How To Mount
 

@@ -29,7 +29,7 @@ Extra Support Documents:
 
 |                                                     | PiSugar 1     | PiSugarS Series | PiSugar2 Series | PiSugar3 Series  |
 |-----------------------------------------------------|---------------|-----------------|-----------------|------------------|
-| RPi zero/zero                                       | Compatible    | Compatible      | Compatible      | Compatible       |
+| RPi zero/zero2                                      | Compatible    | Compatible      | Compatible      | Compatible       |
 | RPi 3A/3B/3B+/4B                                    | Not Support   | Compatible      | Compatible      | Compatible       |
 | RPi 5                                               | Not Support   | Not Support     | Not Support     | Compatible       |
 | Data exchange                                       | Not Support   | Not Support     | I2C             | I2C              |

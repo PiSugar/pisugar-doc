@@ -124,7 +124,7 @@ Some functions can be operated on WebUI, indicating that this function does not 
 
    **Data description:**
 
-   1 is on, 0 is off
+   Set 0 is poweroff
 
    **Function description:**
 

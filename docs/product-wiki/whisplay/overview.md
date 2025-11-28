@@ -63,6 +63,10 @@ sudo reboot
 
 #### Sound Card Detection
 
+:::warning
+If you are using `PiSugarS (Plus)` as well, please make sure to turn off the `AUTO` switch on `PiSugarS (Plus)` to avoid I2C conflicts. Otherwise the sound card cannot be detected by the system.
+:::
+
 Check playback: `aplay -l`
 
 ```bash
@@ -97,7 +101,8 @@ To get the sound card number, use the commands `aplay -l` and `arecord -l` as sh
 :::
 
 Recording
-hw:1,0 indicates using sound card 1, device 0. You can modify the parameters as needed.
+
+`hw:1,0` indicates using sound card 1, device 0. You can modify the parameters as needed.
 
 ```
 sudo arecord -D hw:1,0 -f S32_LE -r 16000 -c 2 test.wav
@@ -133,7 +138,7 @@ Please note that the audio component has been installed as a system sound card a
 
 :::info
 
-In the latest **Raspberry Pi OS (2025-11-24)**, newly install sound card will **NOT** be set as default sound card. So specific sound card need to be specified when running the test program. We use a bash shell script to help set the sound card before running the python program.
+In the latest **Raspberry Pi OS (2025-11-24)**, newly install sound card will **NOT** be set as default sound card. So sound card number need to be specified when running the test program. We use a bash shell script to help set the sound card before running the python program.
 
 :::
 

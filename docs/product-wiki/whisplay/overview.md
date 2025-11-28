@@ -90,7 +90,14 @@ Note that the sound card number may vary on different systems and hardware. In t
 
 #### Recording and Playback Test
 
+:::info
+
+To get the sound card number, use the commands `aplay -l` and `arecord -l` as shown above. And find the sound card number corresponding to `wm8960soundcard`.
+
+:::
+
 Recording
+hw:1,0 indicates using sound card 1, device 0. You can modify the parameters as needed.
 
 ```
 sudo arecord -D hw:1,0 -f S32_LE -r 16000 -c 2 test.wav
@@ -123,6 +130,12 @@ The LCD, RGB LED, and buttons are all controlled by Python, with all functionali
 Please note that the audio component has been installed as a system sound card and is not included in the Driver. You should use the audio functionality as a standard system sound card.
 
 #### Test Program
+
+:::info
+
+In the latest **Raspberry Pi OS (2025-11-24)**, newly install sound card will **NOT** be set as default sound card. So specific sound card need to be specified when running the test program. We use a bash shell script to help set the sound card before running the python program.
+
+:::
 
 Navigate to the example directory and run the test program.
 

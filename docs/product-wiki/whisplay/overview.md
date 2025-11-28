@@ -122,40 +122,23 @@ The LCD, RGB LED, and buttons are all controlled by Python, with all functionali
 
 Please note that the audio component has been installed as a system sound card and is not included in the Driver. You should use the audio functionality as a standard system sound card.
 
-#### Test Program 1
+#### Test Program
 
 Navigate to the example directory and run the test program.
 
-```python
-cd Whisplay/example
-sudo python test.py
-#sudo python test.py --image test.jpg --sound test.mp3
-```
-
-#### Test Program 2
-
-The test code completes a function that receives text via socket and displays it, and also notifies the status of the buttons. It can be used as a display interface for an AI chatbot.
-
-- Start the server
-
-  <!-- end list -->
-
-```
+```shell
 cd example
-python chatbot-ui.py
+sudo bash run_test.sh
 ```
 
-The program will continuously listen on port 12345. After a client connects, it can send display information and receive button status.
+You can also specify an image or sound for testing:
 
-- Test UI
-
-  <!-- end list -->
-
-```
-python sockettest.py
+```shell
+sudo bash run_test.sh --image test2.jpg --sound test.mp3
 ```
 
-After running sockettest.py, click the button, and the content displayed on the LCD will change randomly.
+**Effect**: When executed, the script will display a test image on the LCD. Pressing any button will change the screen to a solid color, and the RGB LED will simultaneously change to match that color.
+
 
 ## Technical Information
 

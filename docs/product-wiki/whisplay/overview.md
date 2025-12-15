@@ -155,6 +155,15 @@ You can also specify an image or sound for testing:
 sudo bash run_test.sh --image test2.jpg --sound test.mp3
 ```
 
+To test the microphone recording function, run:
+
+```shell
+cd example
+sudo bash mic_test.sh
+```
+
+It will record a 10-second audio and save it as `mic_test.wav`, then play it back automatically.
+
 **Effect**: When executed, the script will display a test image on the LCD. Pressing any button will change the screen to a solid color, and the RGB LED will simultaneously change to match that color.
 
 

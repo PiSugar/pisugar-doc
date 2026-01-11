@@ -152,7 +152,7 @@ sudo bash run_test.sh
 You can also specify an image or sound for testing:
 
 ```shell
-sudo bash run_test.sh --image test2.jpg --sound test.mp3
+sudo bash run_test.sh --image data/test2.jpg --sound data/test.mp3
 ```
 
 To test the microphone recording function, run:
@@ -166,6 +166,7 @@ It will record a 10-second audio and save it as `mic_test.wav`, then play it bac
 
 **Effect**: When executed, the script will display a test image on the LCD. Pressing any button will change the screen to a solid color, and the RGB LED will simultaneously change to match that color.
 
+More examples please refer to: [Whisplay GitHub Repository](https://github.com/PiSugar/Whisplay)
 
 ## Technical Information
 

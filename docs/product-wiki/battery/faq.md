@@ -8,7 +8,7 @@ sidebar_position: 10
 
 The common cause of this issue is residual solder mask on the bottom of the Raspberry Pi's GPIO pins. The contact issue with the pogo pins may also cause data communication errors between PiSugar and the Raspberry Pi. 
 
-You can gently scrape the solder points with a plastic tool to ensure a clean connection for the pogo pins. After that, try reinstalling the PiSugar on the bottom of the Raspberry Pi.
+You can gently scrape the solder points with a plastic tool to ensure a clean connection for the pogo pins. Or using alcohol wipe to clean the bottom of the pins. After that, try reinstalling the PiSugar on the bottom of the Raspberry Pi.
 
 <!-- <img src="https://github.com/user-attachments/assets/d23c22bb-ca92-4b91-8f3b-75fd98985892" width="500"> -->
 ![PiSugar Installation](https://github.com/user-attachments/assets/d23c22bb-ca92-4b91-8f3b-75fd98985892)

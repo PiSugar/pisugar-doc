@@ -48,3 +48,101 @@ For soft shutdown scenarios, the software needs to notify PiSugar 3 (Plus) to sh
 - Use the command `i2cdetect -y 1` to check if the hardware is communicating properly with the Raspberry Pi. If the corresponding device address is not displayed, refer to issue 1 for troubleshooting.
 - Install `pisugar-power-manager`, select the model PiSugar 3, and ensure it runs properly (displays battery information).
 - Try the shutdown command again and observe whether PiSugar 3 shuts down correctly.
+
+---
+
+## Customer Issue Analysis (Based on 300 Support Emails)
+
+*Last updated: 2026-02-01*  
+*Data source: Gmail analyzed emails (past 6 months)*
+
+### 📊 Common Issue Ranking
+
+| Rank | Issue Type | Count | Percentage |
+|------|-----------|-------|------------|
+| 1 | Order Issues | 39 | 13.0% |
+| 2 | Whisplay Related | 19 | 6.3% |
+| 3 | Shipping & Delivery | 18 | 6.0% |
+| 4 | Battery/Power | 9 | 3.0% |
+| 5 | RTC Time | 3 | 1.0% |
+
+### 💬 Common Solutions
+
+#### Whisplay Screen/Audio Issues
+
+**Symptoms**: No display, audio noise, not working
+
+**Solutions**:
+```bash
+# Check I2C communication
+sudo i2cdetect -y 1
+
+# Reinstall driver
+sudo apt update
+sudo apt install pisugar-whisplay-driver
+```
+
+#### I2C Communication Issues
+
+**Symptoms**: `sudo i2cdetect -y 1` shows no devices
+
+**Diagnosis**:
+- All `--`: Hardware connection issue
+- Shows `57` and `68`: Hardware OK, software issue
+
+**Solutions**:
+1. Clean GPIO pins with eraser
+2. Clean pogo pins with alcohol swabs
+3. Ensure screws are evenly tightened
+4. Check pogo pins are not bent
+
+#### RTC Time Issues
+
+**Symptoms**: Time not saved, resets on every boot
+
+**Solutions**:
+```bash
+# Enable I2C
+sudo raspi-config  # Interfacing Options → I2C → Enable
+
+# Check I2C address (should show 68)
+sudo i2cdetect -y 1
+
+# Enable RTC driver
+sudo raspi-config  # Advanced Options → RTC → Yes
+
+# Sync time
+sudo hwclock -w    # System → RTC
+sudo hwclock -s    # RTC → System
+```
+
+#### Battery/Power Issues
+
+**Symptoms**: Cannot charge, short battery life
+
+**Solutions**:
+1. Use charger with 5V/2A or higher
+2. **Shutdown charging**:
+   - PiSugar 1: Not supported
+   - PiSugar S/2/3: Supported
+
+### 🔧 Quick Command Reference
+
+| Command | Purpose |
+|---------|---------|
+| `sudo i2cdetect -y 1` | Check I2C devices |
+| `sudo raspi-config` | Configure Raspberry Pi |
+| `sudo hwclock -r` | Read RTC time |
+| `sudo systemctl status pisugar` | Check service status |
+| `sudo systemctl restart pisugar` | Restart service |
+
+### 📞 Official Resources
+
+- 📖 Docs: https://docs.pisugar.com
+- 💻 GitHub: https://github.com/PiSugar
+- 🛒 Shop: https://www.pisugar.com
+- 📧 Support: support@pisugar.com
+
+---
+
+*This analysis is based on actual customer email data*

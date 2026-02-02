@@ -132,13 +132,13 @@ Low-quality power supplies may cause instability, charging issues, or data corru
 
 **Whisplay compatibility:**
 
-| PiSugar Model | Compatible |
-|---------------|------------|
-| PiSugar 2 / 2 Plus | ✅ Yes |
-| PiSugar 3 / 3 Plus | ✅ Yes |
-| PiSugar S | ❌ No |
+| PiSugar Model | Compatible | Notes |
+|---------------|------------|-------|
+| PiSugar 2 / 2 Plus | ✅ Yes | Full compatibility |
+| PiSugar 3 / 3 Plus | ✅ Yes | Full compatibility |
+| PiSugar S / S Plus | ⚠️ Partial | Must turn OFF auto startup switch |
 
-Whisplay HAT works with PiSugar 2 and 3 series (including Plus models), but is not compatible with PiSugar S series.
+Whisplay HAT works with PiSugar 2 and 3 series (including Plus models). For PiSugar S series (including Plus), you must turn OFF the auto startup switch on the board to use Whisplay.
 
 ### 13. Does PiSugar get hot during use?
 

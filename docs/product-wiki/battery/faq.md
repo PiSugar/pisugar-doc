@@ -114,3 +114,56 @@ Use a quality power supply with at least **5V/2A**. For best results:
 :::warning
 Low-quality power supplies may cause instability, charging issues, or data corruption.
 :::
+
+### 11. Is PiSugar compatible with my Raspberry Pi?
+
+**PiSugar 1**: Raspberry Pi Zero / Zero2 (WH)
+
+**PiSugar S / 2 / 3**: Raspberry Pi Zero / Zero2 / 3A / 3B / 3B+ / 4B / 5
+
+| Model | Pi 1/Zero | Pi 3/4 | Pi 5 |
+|-------|-----------|--------|------|
+| PiSugar 1 | ✅ | ❌ | ❌ |
+| PiSugar S | ✅ | ✅ | ❌ |
+| PiSugar 2 | ✅ | ✅ | ❌ |
+| PiSugar 3 | ✅ | ✅ | ✅ |
+
+### 12. Does PiSugar get hot during use?
+
+PiSugar may feel warm during charging or high-load operation. This is normal behavior. However, if the device becomes excessively hot to the touch:
+
+1. Disconnect external power and remove PiSugar
+2. Allow it to cool down for 15-30 minutes
+3. Check for physical damage or swelling
+4. Try a different power supply (5V/2A or higher)
+5. If problem persists, contact support
+
+:::warning
+Do not use PiSugar if the battery appears swollen or damaged.
+:::
+
+### 13. What should I do if my PiSugar is defective or not working?
+
+If your PiSugar product is defective or not working:
+
+1. **Check our troubleshooting guide** above - most issues can be resolved
+2. **Contact support** with:
+   - Order number
+   - Description of the problem
+   - Photos/videos if applicable
+3. **Warranty coverage**: 6-month warranty for manufacturing defects
+4. **Refund/Return**: Available within 30 days of delivery if unused
+
+Contact: support@pisugar.com
+
+### 14. What is the return and refund policy?
+
+- **Return period**: 30 days from delivery
+- **Condition**: Product must be unused and in original packaging
+- **Warranty**: 6 months for manufacturing defects
+- **Refund process**: 5-7 business days after we receive the returned item
+- **Contact**: support@pisugar.com for return authorization
+
+:::info
+For international orders, return shipping costs are the customer's responsibility.
+:::

@@ -152,13 +152,13 @@ If your PiSugar product is defective or not working:
    - Description of the problem
    - Photos/videos if applicable
 3. **Warranty coverage**: 6-month warranty for manufacturing defects
-4. **Refund/Return**: Available within 30 days of delivery if unused
+4. **Refund/Return**: Contact us for return authorization
 
 Contact: support@pisugar.com
 
 ### 14. What is the return and refund policy?
 
-- **Return period**: Contact us within 30 days of delivery
+- **Return period**: Contact us for return authorization
 - **Condition**: Product must be unused and in original packaging
 - **Warranty**: 6 months for manufacturing defects
 - **Refund process**: 5-7 business days after we receive the returned item

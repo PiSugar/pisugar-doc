@@ -49,100 +49,68 @@ For soft shutdown scenarios, the software needs to notify PiSugar 3 (Plus) to sh
 - Install `pisugar-power-manager`, select the model PiSugar 3, and ensure it runs properly (displays battery information).
 - Try the shutdown command again and observe whether PiSugar 3 shuts down correctly.
 
----
+### 5. Why is my Whisplay screen not working?
 
-## Customer Issue Analysis (Based on 300 Support Emails)
+First, check I2C communication:
 
-*Last updated: 2026-02-01*  
-*Data source: Gmail analyzed emails (past 6 months)*
-
-### 📊 Common Issue Ranking
-
-| Rank | Issue Type | Count | Percentage |
-|------|-----------|-------|------------|
-| 1 | Order Issues | 39 | 13.0% |
-| 2 | Whisplay Related | 19 | 6.3% |
-| 3 | Shipping & Delivery | 18 | 6.0% |
-| 4 | Battery/Power | 9 | 3.0% |
-| 5 | RTC Time | 3 | 1.0% |
-
-### 💬 Common Solutions
-
-#### Whisplay Screen/Audio Issues
-
-**Symptoms**: No display, audio noise, not working
-
-**Solutions**:
 ```bash
-# Check I2C communication
 sudo i2cdetect -y 1
+```
 
-# Reinstall driver
+If you see addresses `57` and `68`, the hardware is working. Try reinstalling the driver:
+
+```bash
 sudo apt update
 sudo apt install pisugar-whisplay-driver
 ```
 
-#### I2C Communication Issues
+If no devices are detected, refer to issue 1 for GPIO cleaning instructions.
 
-**Symptoms**: `sudo i2cdetect -y 1` shows no devices
+### 6. Why is there audio noise from Whisplay?
 
-**Diagnosis**:
-- All `--`: Hardware connection issue
-- Shows `57` and `68`: Hardware OK, software issue
+Audio noise is usually caused by I2C communication issues or power supply problems. Try:
 
-**Solutions**:
-1. Clean GPIO pins with eraser
-2. Clean pogo pins with alcohol swabs
-3. Ensure screws are evenly tightened
-4. Check pogo pins are not bent
+1. Ensure stable power supply (5V/2A or higher)
+2. Check I2C connection with `sudo i2cdetect -y 1`
+3. Reinstall the Whisplay driver
+4. Test on a different Raspberry Pi
 
-#### RTC Time Issues
+### 7. How to fix RTC time not being saved?
 
-**Symptoms**: Time not saved, resets on every boot
+RTC requires I2C communication. Follow these steps:
 
-**Solutions**:
+1. Enable I2C: `sudo raspi-config` → Interfacing Options → I2C → Enable
+2. Check I2C address (should show 68): `sudo i2cdetect -y 1`
+3. Enable RTC driver: `sudo raspi-config` → Advanced Options → RTC → Yes
+4. Sync time:
+   - System to RTC: `sudo hwclock -w`
+   - RTC to system: `sudo hwclock -s`
+
+### 8. Can PiSugar charge while powered off?
+
+- **PiSugar 1**: No, charging only works when powered on
+- **PiSugar S/2/3**: Yes, supports charging while powered off
+
+For PiSugar 3, use the Power Manager app to enable shutdown charging if needed.
+
+### 9. How to check battery status?
+
+Install the Power Manager app and select your PiSugar model:
+
 ```bash
-# Enable I2C
-sudo raspi-config  # Interfacing Options → I2C → Enable
-
-# Check I2C address (should show 68)
-sudo i2cdetect -y 1
-
-# Enable RTC driver
-sudo raspi-config  # Advanced Options → RTC → Yes
-
-# Sync time
-sudo hwclock -w    # System → RTC
-sudo hwclock -s    # RTC → System
+sudo apt install pisugar-power-manager
 ```
 
-#### Battery/Power Issues
+The app will display battery percentage, voltage, and charging status.
 
-**Symptoms**: Cannot charge, short battery life
+### 10. What power supply should I use?
 
-**Solutions**:
-1. Use charger with 5V/2A or higher
-2. **Shutdown charging**:
-   - PiSugar 1: Not supported
-   - PiSugar S/2/3: Supported
+Use a quality power supply with at least **5V/2A**. For best results:
 
-### 🔧 Quick Command Reference
+- PiSugar 1: 5V/1.5A minimum
+- PiSugar S/2/3: 5V/2A recommended
+- PiSugar 3 Plus: 5V/2.5A for fast charging
 
-| Command | Purpose |
-|---------|---------|
-| `sudo i2cdetect -y 1` | Check I2C devices |
-| `sudo raspi-config` | Configure Raspberry Pi |
-| `sudo hwclock -r` | Read RTC time |
-| `sudo systemctl status pisugar` | Check service status |
-| `sudo systemctl restart pisugar` | Restart service |
-
-### 📞 Official Resources
-
-- 📖 Docs: https://docs.pisugar.com
-- 💻 GitHub: https://github.com/PiSugar
-- 🛒 Shop: https://www.pisugar.com
-- 📧 Support: support@pisugar.com
-
----
-
-*This analysis is based on actual customer email data*
+:::warning
+Low-quality power supplies may cause instability, charging issues, or data corruption.
+:::

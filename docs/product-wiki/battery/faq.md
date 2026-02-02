@@ -158,7 +158,7 @@ Contact: support@pisugar.com
 
 ### 14. What is the return and refund policy?
 
-- **Return period**: 30 days from delivery
+- **Return period**: Contact us within 30 days of delivery
 - **Condition**: Product must be unused and in original packaging
 - **Warranty**: 6 months for manufacturing defects
 - **Refund process**: 5-7 business days after we receive the returned item

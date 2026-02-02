@@ -128,7 +128,19 @@ Low-quality power supplies may cause instability, charging issues, or data corru
 | PiSugar 2 | ✅ | ✅ | ❌ |
 | PiSugar 3 | ✅ | ✅ | ✅ |
 
-### 12. Does PiSugar get hot during use?
+### 12. Is Whisplay compatible with my PiSugar?
+
+**Whisplay compatibility:**
+
+| PiSugar Model | Compatible |
+|---------------|------------|
+| PiSugar 2 / 2 Plus | ✅ Yes |
+| PiSugar 3 / 3 Plus | ✅ Yes |
+| PiSugar S | ❌ No |
+
+Whisplay HAT works with PiSugar 2 and 3 series (including Plus models), but is not compatible with PiSugar S series.
+
+### 13. Does PiSugar get hot during use?
 
 PiSugar may feel warm during charging or high-load operation. This is normal behavior. However, if the device becomes excessively hot to the touch:
 

@@ -40,7 +40,7 @@ sidebar_position: 1
 
 Whisplay allows for enhanced audio flexibility. Easily switch to an external speaker using the dedicated control.
 
-Note: Compatible speakers must be single-channel (mono) and utilize an XH2.0 connector. 
+Note: Compatible speakers must be single-channel (mono) and utilize an PH2.0 connector. 
 
 ## Raspberry Pi Usage Instructions
 

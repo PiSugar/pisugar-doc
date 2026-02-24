@@ -42,15 +42,19 @@ Whisplay allows for enhanced audio flexibility. Easily switch to an external spe
 
 Note: Compatible speakers must be single-channel (mono) and utilize an PH2.0 connector. 
 
-## Raspberry Pi Usage Instructions
+## Getting Start
 
 Refer to the github link: [https://github.com/PiSugar/Whisplay](https://github.com/PiSugar/Whisplay)
 
 For now, Whisplay driver only support the latest official Raspberry Pi OS (not including the `Lite` version).
 
+:::info
+Whisplay HAT also works on **Radxa Zero 3W** or **Radxa Cubie A7Z**, please refer to [GitHub](https://github.com/PiSugar/Whisplay) for more details.
+:::
+
 ### Audio Function
 
-#### Installation
+#### Installation On Raspberry Pi
 
 After cloning the github project, navigate to the Driver directory and use the script to install.
 

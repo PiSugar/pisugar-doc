@@ -6,8 +6,6 @@ sidebar_position: 3
 
 The default I2C frequency for `i2c-7` on the Radxa Cubie A7Z is set to `400kHz`. However, in some cases, this may lead to instability in detecting the PiSugar3 battery device. This document provides a step-by-step guide to downclock `i2c-7` to `100kHz`, which can improve the detection success rate of the battery device.
 
-This document summarizes the practical steps for lowering `i2c-7` from `400kHz` to `100kHz` on the Radxa Cubie A7Z, and improving the detection success rate of the PiSugar3 battery device.
-
 ## Applicable Scenarios
 
 - PiSugar3 power supply and physical wiring have been confirmed to be normal.

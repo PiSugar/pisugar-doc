@@ -20,6 +20,7 @@ Version intergrated with LLM8850:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/IuTD5OMaVVU?si=TfSRHhYWSvdL4x2u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nhXfJC4qamw?si=Q3Ui-Mar0P8n33-g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Link
 

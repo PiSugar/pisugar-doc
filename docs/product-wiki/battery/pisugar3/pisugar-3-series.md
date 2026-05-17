@@ -114,7 +114,7 @@ PiSugar 3 keeps running/working when external power is connecting or disconnecti
 
 PiSugar3 uses independent MCU control to achieve communication and functions. Only with a simple command, firmware upgrades can be achieved through Raspberry Pi, letting the device get the latest features.
 
-You can use following command to update the firmware of PiSugar3 (lastest:1.3.4):
+You can use following command to update the firmware of PiSugar3 (lastest:1.4.0):
 
 ```
 curl https://cdn.pisugar.com/release/PiSugarUpdate.sh | sudo bash

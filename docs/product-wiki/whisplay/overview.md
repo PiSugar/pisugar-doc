@@ -69,19 +69,6 @@ sudo bash install_driver.sh
 sudo reboot
 ```
 
-If platform auto-detection does not work, run the matching installer manually:
-
-```bash
-# Raspberry Pi
-sudo bash script/install_raspberry_pi.sh
-
-# Radxa ZERO 3W
-sudo bash script/install_radxa_zero3w.sh
-
-# Radxa Cubie A7Z
-sudo bash script/install_radxa_cubie_a7z.sh
-```
-
 The installer enables the buses required by Whisplay. I2C and I2S are used by the WM8960 audio codec, while SPI is used by the LCD.
 
 ## Audio Function
@@ -172,7 +159,8 @@ Run the bundled hardware test from the `example` directory:
 
 ```shell
 cd Whisplay/example
-sudo bash run_test.sh
+pip install -r requirements.txt --break-system-packages
+bash run_test.sh
 ```
 
 The script detects the `wm8960soundcard` card index, sets `AUDIODEV`, and runs the full test flow for screen, LED, speaker, button, microphone, and playback.
@@ -180,7 +168,7 @@ The script detects the `wm8960soundcard` card index, sets `AUDIODEV`, and runs t
 You can also specify image or sound files:
 
 ```shell
-sudo bash run_test.sh --image data/test2.jpg --sound data/test.mp3
+bash run_test.sh --image data/test2.jpg --sound data/test.mp3
 ```
 
 ## Whisplay Daemon Service

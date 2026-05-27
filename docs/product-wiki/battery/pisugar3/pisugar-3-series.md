@@ -30,16 +30,6 @@ PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable devi
 | Communication interface   | 0x57/0x68 address | 0x57/0x68 address |
 | Size of PCB               |     65mmX56mm     |     65mmX30mm     |
 
-## Charging Notes
-
-Battery voltage cannot be measured accurately while the battery is actively charging. To estimate the battery level more reliably, PiSugar 3 and PiSugar 3 Plus briefly pause charging every 3 seconds, measure the battery voltage, and then continue charging.
-
-:::warning
-The charging chip can become very hot during charging. Do NOT touch the chip area on the PCB with your hand while charging.
-
-At 2A charging current, the chip temperature may reach about 50-60°C. At 3A charging current, the peak chip temperature may reach up to 80°C.
-:::
-
 ## Support Raspberry Pi Models
 
 | Raspberry Pi Model    | Support | Recommend PiSugar Version |
@@ -111,6 +101,16 @@ After finished, you can manage the battery by visiting http://\<your raspberry i
 PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less than 2% pi0 cpu) and exquisite designed webUI.
 
 User Guide can be found [here](../pisugar-power-manager).
+
+## Charging Notes
+
+Battery voltage cannot be measured accurately while the battery is actively charging. To estimate the battery level more reliably, PiSugar 3 and PiSugar 3 Plus briefly pause charging every 3 seconds, measure the battery voltage, and then continue charging.
+
+:::warning
+The charging chip can become very hot during charging. Do NOT touch the chip area on the PCB with your hand while charging.
+
+At 2A charging current, the chip temperature may reach about 50-60°C. At 3A charging current, the peak chip temperature may reach up to 80°C.
+:::
 
 ## Core Features
 

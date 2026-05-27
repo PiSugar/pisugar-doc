@@ -153,6 +153,16 @@ PiSugar 3 continues to use the pogo pin design to connect with Raspberry Pi from
 
 Both the PiSugar 3 and PiSugar 3 Plus have TypeC charging port. PiSugar3 Plus has an alternative micro-USB charging port.
 
+### Charging Measurement Mechanism
+
+Battery voltage cannot be measured accurately while the battery is actively charging. To estimate the battery level more reliably, PiSugar 3 and PiSugar 3 Plus briefly pause charging every 3 seconds, measure the battery voltage, and then continue charging.
+
+:::warning
+The charging chip can become very hot during charging. Do NOT touch the chip area on the PCB with your hand while charging.
+
+At 2A charging current, the chip temperature may reach about 50-60°C. At 3A charging current, the peak chip temperature may reach up to 80°C.
+:::
+
 ### Onboard RTC
 
 With the ultra-low power consumption design, the onboard RTC can keep the clock running for more than one year when PiSugar is off. Please note that the RTC will stop running if the battery is removed.

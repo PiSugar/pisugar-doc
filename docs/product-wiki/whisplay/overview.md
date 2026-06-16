@@ -10,7 +10,7 @@ sidebar_position: 1
 
 - Power supply voltage: 5V
 - Logic voltage: 3.3V
-- Audio codec chip: WM8960
+- Audio codec chip: ES8389 / WM8960
 - Audio control interface: I2C
 - Audio data interface: I2S
 - Speaker power: 8Ω 1W
@@ -18,6 +18,10 @@ sidebar_position: 1
 - Screen resolution: 240\*280 RGB
 - Screen controller chip: ST7789
 - Screen interface: 4-SPI
+
+:::info
+Due to the discontinuation of the WM8960 chip, new Whisplay HAT units have been upgraded to the ES8389 audio codec. The Whisplay driver supports both audio codec versions starting from v3.0.0.
+:::
 
 ## Supported Platforms
 
@@ -69,7 +73,7 @@ sudo bash install_driver.sh
 sudo reboot
 ```
 
-The installer enables the buses required by Whisplay. I2C and I2S are used by the WM8960 audio codec, while SPI is used by the LCD.
+The installer enables the buses required by Whisplay. I2C and I2S are used by the Whisplay audio codec, while SPI is used by the LCD.
 
 ## Audio Function
 
@@ -90,10 +94,10 @@ Example output:
 ```bash
 pi@PI0WH:~ $ aplay -l
 **** List of PLAYBACK Hardware Devices ****
-card 0: vc4hdmi [vc4-hdmi], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
+card 0: whisplaysound [Whisplay Sound], device 0: Whisplay HiFi ES8389 HiFi-0 [Whisplay HiFi ES8389 HiFi-0]
   Subdevices: 1/1
   Subdevice #0: subdevice #0
-card 1: wm8960soundcard [wm8960-soundcard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 [bcm2835-i2s-wm8960-hifi wm8960-hifi-0]
+card 1: vc4hdmi [vc4-hdmi], device 0: MAI PCM i2s-hifi-0 [MAI PCM i2s-hifi-0]
   Subdevices: 1/1
   Subdevice #0: subdevice #0
 ```
@@ -109,40 +113,56 @@ Example output:
 ```shell
 pi@PI0WH:~ $ arecord -l
 **** List of CAPTURE Hardware Devices ****
-card 1: wm8960soundcard [wm8960-soundcard], device 0: bcm2835-i2s-wm8960-hifi wm8960-hifi-0 [bcm2835-i2s-wm8960-hifi wm8960-hifi-0]
+card 0: whisplaysound [Whisplay Sound], device 0: Whisplay HiFi ES8389 HiFi-0 [Whisplay HiFi ES8389 HiFi-0]
   Subdevices: 1/1
   Subdevice #0: subdevice #0
 ```
 
-The sound card number may vary on different systems and hardware. In the example above, the WM8960 sound card number is `1`.
+The sound card number may vary on different systems and hardware. You can use the stable `whisplaysound` card name in ALSA commands.
+
+<img src="/img/soundcardchoice.png" width="80%"></img>
 
 ### Recording and Playback Test
 
-Use the card number for `wm8960soundcard` in the following commands.
+Use the `whisplaysound` card name in the following commands.
 
 Recording:
 
 ```bash
-sudo arecord -D hw:1,0 -f S32_LE -r 16000 -c 2 test.wav
+arecord -D plughw:whisplaysound,0 -f S32_LE -r 16000 -c 2 test.wav
 ```
 
 Playback:
 
 ```bash
-sudo aplay -D hw:1,0 test.wav
+aplay -D plughw:whisplaysound,0 test.wav
 ```
 
-The system also provides a graphical mixer. Press `F6` to select the `wm8960` sound card.
+The system also provides a graphical mixer. Open it with the `whisplaysound` card selected:
 
 ```bash
-sudo alsamixer
+sudo alsamixer -c whisplaysound
 ```
-
-<img src="/img/soundcardchoice.png" width="50%"></img>
 
 The default volume is relatively low. It can be adjusted up to around 70; higher values may cause distortion.
 
 <img src="/img/soundcardconfig.png" width="80%"></img>
+
+You can also check and adjust the speaker volume from the command line:
+
+```bash
+amixer -c whisplaysound cget name=speaker
+sudo amixer -c whisplaysound cset name=speaker 70
+```
+
+Example output:
+
+```bash
+pi@PI0WH:~ $ amixer -c whisplaysound cget name=speaker
+numid=19,iface=MIXER,name='speaker'
+  ; type=INTEGER,access=rw------,values=1,min=0,max=100,step=0
+  : values=80
+```
 
 ## Display, Buttons, LED, and Apps
 
@@ -163,7 +183,7 @@ pip install -r requirements.txt --break-system-packages
 bash run_test.sh
 ```
 
-The script detects the `wm8960soundcard` card index, sets `AUDIODEV`, and runs the full test flow for screen, LED, speaker, button, microphone, and playback.
+The script detects the `whisplaysound` card index, sets `AUDIODEV`, and runs the full test flow for screen, LED, speaker, button, microphone, and playback.
 
 You can also specify image or sound files:
 
@@ -261,7 +281,7 @@ The current driver repository is organized by responsibility:
 - `script/`: platform-specific install scripts
 - `runtime/`: Python runtime modules including `whisplay.py` and `whisplay_client.py`
 - `daemon/`: local hardware daemon, systemd installer, internal pages, and default app definitions
-- `audio/`: WM8960 audio assets and Radxa DTS overlays
+- `audio/`: audio assets and Radxa DTS overlays
 - `example/`: hardware tests and demo applications
 
 ## Technical Information
@@ -270,6 +290,7 @@ The current driver repository is organized by responsibility:
 
 - Schematic [Schematic](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/Whisplay.pdf)
 - 3D model [3D model](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/WhisPlay.step)
+- ES8389 Technical Manual [ES8389 Technical Manual](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/ES8389.pdf)
 - WM8960 Technical Manual [WM8960 Technical Manual](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/WM8960_v4.2.pdf)
 - Screen Technical Manual and Source Code [Screen Technical Manual and Source Code](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/1.69LCD.zip)
 

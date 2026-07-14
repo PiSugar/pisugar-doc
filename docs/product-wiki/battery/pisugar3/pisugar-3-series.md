@@ -8,6 +8,7 @@ PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable devi
 
 <img src="/img/pisugar3plus.jpg" alt="PiSugar 3 Plus" width="400"></img>
 <img src="/img/pisugar3.jpg" alt="PiSugar 3" width="400"></img>
+<img src="/img/pisugar3-air.png" alt="PiSugar 3 Air" width="400"></img>
 
 ## Hardware SPECS
 
@@ -16,28 +17,29 @@ PiSugar3 is the third generation of PiSugar, making Raspberry Pi a portable devi
 - Type-C: charging port, with E-mark support
 - MicroUSB: charging port (Only for PiSugar3 Plus)
 - PH2.0 Battery Plug (Only for PiSugar3 Plus)
+- Pluggable battery connector for user-selected 3.7V lithium battery (Only for PiSugar3 Air)
 - Tap Power Button
 - Programmable Tap Button
 - Extension Interface: I2C interface, 5V output
 
 ## Electrical Specifications
 
-| Electrical Specifications |  PiSugar 3 Plus   |     PiSugar 3     |
-| :------------------------ | :---------------: | :---------------: |
-| Input                     |     5V-3Amax      |     5V-3Amax      |
-| Output                    |     5V-3Amax      |    5V-2.5Amax     |
-| Battery capacity          |      5000mah      |      1200mah      |
-| Communication interface   | 0x57/0x68 address | 0x57/0x68 address |
-| Size of PCB               |     65mmX56mm     |     65mmX30mm     |
+| Electrical Specifications |  PiSugar 3 Plus   |     PiSugar 3     |      PiSugar 3 Air      |
+| :------------------------ | :---------------: | :---------------: | :---------------------: |
+| Input                     |     5V-3Amax      |     5V-3Amax      |        5V-3Amax         |
+| Output                    |     5V-3Amax      |    5V-2.5Amax     |       5V-2.5Amax        |
+| Battery capacity          |      5000mah      |      1200mah      | User-selected 3.7V cell |
+| Communication interface   | 0x57/0x68 address | 0x57/0x68 address |    0x57/0x68 address    |
+| Size of PCB               |     65mmX56mm     |     65mmX30mm     |        65mmX30mm        |
 
 ## Support Raspberry Pi Models
 
 | Raspberry Pi Model    | Support | Recommend PiSugar Version |
 | :-------------------- | :------ | :-----------------------: |
-| Raspberry Pi Zero     | Yes     |         PiSugar 3         |
-| Raspberry Pi Zero W   | Yes     |         PiSugar 3         |
-| Raspberry Pi Zero 2   | Yes     |         PiSugar 3         |
-| Raspberry Pi Zero 2 W | Yes     |         PiSugar 3         |
+| Raspberry Pi Zero     | Yes     |    PiSugar 3 / 3 Air      |
+| Raspberry Pi Zero W   | Yes     |    PiSugar 3 / 3 Air      |
+| Raspberry Pi Zero 2   | Yes     |    PiSugar 3 / 3 Air      |
+| Raspberry Pi Zero 2 W | Yes     |    PiSugar 3 / 3 Air      |
 | Raspberry Pi 2        | Yes     |      PiSugar 3 Plus       |
 | Raspberry Pi 3A       | Yes     |      PiSugar 3 Plus       |
 | Raspberry Pi 3B       | Yes     |      PiSugar 3 Plus       |
@@ -57,12 +59,15 @@ PiSugar3:
   <source src="https://doc-resourses.pisugar.uk/pisugar3-install.mp4" type="video/mp4"></source>
 </video>
 
+PiSugar3 Air uses the same mounting method as PiSugar3.
+
 ### Mounting Steps
 
-- Make sure the PiSugar3 (Plus) is powered off.
-- Remove the protective film on the screw nuts of the PiSugar3 (Plus) board.
-- Align the four screw nuts of the PiSugar3 (Plus) board with the Raspberry Pi board (PiSugar board under the RPI), the pogo pins on PiSugar3 (Plus) and the RPI's GPIO should be at the same side, and press the RPI board down gently.
-- Use the provided screws to secure the PiSugar3 (Plus) board to the Raspberry Pi board.
+- Make sure the PiSugar3 (Plus/Air) is powered off.
+- Remove the protective film on the screw nuts of the PiSugar3 (Plus/Air) board.
+- Align the four screw nuts of the PiSugar3 (Plus/Air) board with the Raspberry Pi board (PiSugar board under the RPI), the pogo pins on PiSugar3 (Plus/Air) and the RPI's GPIO should be at the same side, and press the RPI board down gently.
+- Use the provided screws to secure the PiSugar3 (Plus/Air) board to the Raspberry Pi board.
+- For PiSugar3 Air, connect a single-cell 3.7V lithium battery to the battery connector, checking the polarity marks before powering on.
 
 ## Power-On
 
@@ -91,7 +96,7 @@ bash pisugar-power-manager.sh -c release
 Please select the `PiSugar3` model when prompted.
 
 :::info
-Both PiSugar3 and PiSugar3 Plus should be selected as `PiSugar3` during installation.
+PiSugar3 Air, PiSugar3, and PiSugar3 Plus should be selected as `PiSugar3` during installation.
 :::
 
 After finished, you can manage the battery by visiting http://\<your raspberry ip\>:8421 in your browser.
@@ -104,7 +109,11 @@ User Guide can be found [here](../pisugar-power-manager).
 
 ## Charging Notes
 
-Battery voltage cannot be measured accurately while the battery is actively charging. To estimate the battery level more reliably, PiSugar 3 and PiSugar 3 Plus briefly pause charging every 3 seconds, measure the battery voltage, and then continue charging.
+Battery voltage cannot be measured accurately while the battery is actively charging. To estimate the battery level more reliably, PiSugar 3, PiSugar 3 Air, and PiSugar 3 Plus briefly pause charging every 3 seconds, measure the battery voltage, and then continue charging.
+
+:::warning
+PiSugar3 Air must be used with a single-cell 3.7V lithium battery only. Check the battery polarity marks on the board before connecting a battery. Reversed polarity, damaged batteries, or unsupported battery packs may damage the board or create a safety risk.
+:::
 
 :::warning
 The charging chip can become very hot during charging. Do NOT touch the chip area on the PCB with your hand while charging.
@@ -162,6 +171,8 @@ PiSugar 3 continues to use the pogo pin design to connect with Raspberry Pi from
 ### TypeC Charging Interface
 
 Both the PiSugar 3 and PiSugar 3 Plus have TypeC charging port. PiSugar3 Plus has an alternative micro-USB charging port.
+
+PiSugar3 Air has a Type-C charging port and a pluggable battery connector for a user-selected 3.7V lithium battery.
 
 ### Onboard RTC
 

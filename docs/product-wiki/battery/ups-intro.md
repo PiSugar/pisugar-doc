@@ -15,6 +15,7 @@ Take a look at our products:
 * [PiSugar2 Plus](./pisugar2/pisugar-2-plus)
 * [PiSugarS Series](./pisugar-s-series)
 * [PiSugar3 Series](./pisugar3/pisugar-3-series)
+* [PiSugar3 Air](./pisugar3/pisugar-3-air)
 
 Extra Support Documents:
 

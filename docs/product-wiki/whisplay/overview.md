@@ -288,7 +288,8 @@ The current driver repository is organized by responsibility:
 
 ### Documents
 
-- Schematic [Schematic](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/Whisplay.pdf)
+- ES8389 Schematic [ES8389 Schemati](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/WhisPlay_ES8389.pdf)
+- WM8960 Schematic [WM8960 Schemati](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/Whisplay_wm8960.pdf)
 - 3D model [3D model](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/WhisPlay.step)
 - ES8389 Technical Manual [ES8389 Technical Manual](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/ES8389.pdf)
 - WM8960 Technical Manual [WM8960 Technical Manual](https://cdn.pisugar.com/pisugar-docs/documents/whisplay/WM8960_v4.2.pdf)

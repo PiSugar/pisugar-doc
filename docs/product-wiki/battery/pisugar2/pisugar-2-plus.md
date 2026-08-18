@@ -36,7 +36,7 @@ Make sure you are not running any PHAT or other program occupying i2c address `0
 | Size of PCB               |     65mmX56mm     |
 
 <!-- <p align="left">
-  <img width="400" src="http://cdn.pisugar.com/img/pro-1.JPG?imageView2/0/w/800">
+  <img width="400" src="https://cdn.pisugar.com/img/pro-1.JPG?imageView2/0/w/800">
 </p> -->
 
 ![PiSugar2 Pro](https://cdn.pisugar.com/img/pro-1.JPG?imageView2/0/w/600)
@@ -102,7 +102,7 @@ Please select the `PiSugar2 Pro` model when prompted.
 After finished, you can manage the battery by visiting http://\<your raspberry ip\>:8421 in your browser.
 
 <!-- <p>
-  <img width="600" src="http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800">
+  <img width="600" src="https://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800">
 </p> -->
 
 ![PiSugar2 Pro WebUI](https://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800)

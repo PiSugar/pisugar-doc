@@ -77,10 +77,10 @@ Please select the `PiSugar2 (2-LEDs)` model when prompted.
 After finished, you can manage the battery by visiting http://\<your raspberry ip\>:8421 in your browser.
 
 <!-- <p>
-  <img width="600" src="http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800">
+  <img width="600" src="https://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800">
 </p> -->
 
-![PiSugar2 WebUI](http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800)
+![PiSugar2 WebUI](https://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800)
 
 PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less than 2% pi0 cpu) and exquisite designed webUI.
 
@@ -143,7 +143,7 @@ PiSugar2 has solder pads for developers to debug or add other functions.
 - 5V Input (Qi): for 5V wireless charging or solar charging
 - 5V Output: other usages
 
-![PiSugar2 Detail](http://cdn.pisugar.com/img/pisugar2-detail.jpg?imageView2/0/w/1000)
+![PiSugar2 Detail](https://cdn.pisugar.com/img/pisugar2-detail.jpg?imageView2/0/w/1000)
 
 ## Certificate
 

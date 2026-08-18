@@ -101,7 +101,7 @@ PiSugar3 Air, PiSugar3, and PiSugar3 Plus should be selected as `PiSugar3` durin
 
 After finished, you can manage the battery by visiting http://\<your raspberry ip\>:8421 in your browser.
 
-![PiSugar logo](http://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800)
+![PiSugar logo](https://cdn.pisugar.com/pisugar2/images/ui.png?imageView2/0/w/800)
 
 PiSugar Power Manager is develop in Rust and Vue2.0, with high performace (less than 2% pi0 cpu) and exquisite designed webUI.
 

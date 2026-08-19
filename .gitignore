@@ -3,6 +3,7 @@
 
 # Production
 /build
+/converted-videos/
 
 # Generated files
 .docusaurus

@@ -31,9 +31,11 @@ export type PlaylistData = {
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
 
 export default function youtubePlaylistPlugin(
-  _context: LoadContext,
+  context: LoadContext,
   options: PluginOptions,
 ): Plugin<PlaylistData> {
+  const siteReferrer = new URL('/', context.siteConfig.url).toString();
+
   return {
     name: 'youtube-playlist',
 
@@ -62,6 +64,9 @@ export default function youtubePlaylistPlugin(
         }
 
         const response = await fetch(`${YOUTUBE_API_URL}?${params}`, {
+          headers: {
+            Referer: siteReferrer,
+          },
           signal: AbortSignal.timeout(20_000),
         });
         const data = (await response.json()) as PlaylistResponse;

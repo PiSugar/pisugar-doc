@@ -24,26 +24,17 @@ type Props = {
 };
 
 export default function YouTubePlaylist({playlistId}: Props): React.ReactNode {
-  const data = usePluginData('youtube-playlist') as PlaylistData | undefined;
-  const items = data?.playlistId === playlistId ? data.items : [];
+  const data = usePluginData('youtube-playlist', undefined, {
+    failfast: true,
+  }) as PlaylistData;
 
-  if (items.length === 0) {
-    return (
-      <div className={styles.fallbackPlayer}>
-        <iframe
-          src={`https://www.youtube.com/embed/videoseries?list=${encodeURIComponent(playlistId)}`}
-          title="Whisplay AI Chatbot video playlist"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerPolicy="strict-origin-when-cross-origin"
-          allowFullScreen
-        />
-      </div>
-    );
+  if (data.playlistId !== playlistId) {
+    throw new Error(`No build-time data found for YouTube playlist ${playlistId}.`);
   }
 
   return (
     <div className={styles.playlist}>
-      {items.map((item) => (
+      {data.items.map((item) => (
         <article className={styles.video} key={item.id}>
           <div className={styles.player}>
             <iframe

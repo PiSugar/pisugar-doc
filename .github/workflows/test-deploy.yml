@@ -24,3 +24,5 @@ jobs:
         run: npm ci
       - name: Test build website
         run: npm run build
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}

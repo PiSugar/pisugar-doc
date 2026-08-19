@@ -41,54 +41,55 @@ export default function youtubePlaylistPlugin(
       const apiKey = process.env.YOUTUBE_API_KEY;
 
       if (!apiKey) {
-        console.warn(
-          '[youtube-playlist] YOUTUBE_API_KEY is not configured; using the playlist embed fallback.',
+        throw new Error(
+          '[youtube-playlist] YOUTUBE_API_KEY is required to expand the playlist during the build.',
         );
-        return {playlistId: options.playlistId, items: []};
       }
 
-      try {
-        const items: PlaylistItem[] = [];
-        let pageToken = '';
+      const items: PlaylistItem[] = [];
+      let pageToken = '';
 
-        do {
-          const params = new URLSearchParams({
-            part: 'snippet',
-            maxResults: '50',
-            playlistId: options.playlistId,
-            key: apiKey,
-          });
-
-          if (pageToken) {
-            params.set('pageToken', pageToken);
-          }
-
-          const response = await fetch(`${YOUTUBE_API_URL}?${params}`, {
-            signal: AbortSignal.timeout(20_000),
-          });
-          const data = (await response.json()) as PlaylistResponse;
-
-          if (!response.ok) {
-            throw new Error(data.error?.message || 'Unable to load the playlist.');
-          }
-
-          items.push(...(data.items ?? []));
-          pageToken = data.nextPageToken ?? '';
-        } while (pageToken);
-
-        return {
+      do {
+        const params = new URLSearchParams({
+          part: 'snippet',
+          maxResults: '50',
           playlistId: options.playlistId,
-          items: items
-            .filter((item) => item.snippet.resourceId.videoId)
-            .sort((a, b) => a.snippet.position - b.snippet.position),
-        };
-      } catch (error) {
-        const message = error instanceof Error ? error.message : String(error);
-        console.warn(
-          `[youtube-playlist] API request failed; using the playlist embed fallback: ${message}`,
+          key: apiKey,
+        });
+
+        if (pageToken) {
+          params.set('pageToken', pageToken);
+        }
+
+        const response = await fetch(`${YOUTUBE_API_URL}?${params}`, {
+          signal: AbortSignal.timeout(20_000),
+        });
+        const data = (await response.json()) as PlaylistResponse;
+
+        if (!response.ok) {
+          throw new Error(
+            `[youtube-playlist] ${data.error?.message || 'Unable to load the playlist.'}`,
+          );
+        }
+
+        items.push(...(data.items ?? []));
+        pageToken = data.nextPageToken ?? '';
+      } while (pageToken);
+
+      const expandedItems = items
+        .filter((item) => item.snippet.resourceId.videoId)
+        .sort((a, b) => a.snippet.position - b.snippet.position);
+
+      if (expandedItems.length === 0) {
+        throw new Error(
+          `[youtube-playlist] Playlist ${options.playlistId} did not return any videos.`,
         );
-        return {playlistId: options.playlistId, items: []};
       }
+
+      return {
+        playlistId: options.playlistId,
+        items: expandedItems,
+      };
     },
 
     contentLoaded({content, actions}) {

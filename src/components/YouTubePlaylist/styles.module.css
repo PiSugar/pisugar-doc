@@ -8,8 +8,7 @@
   font-size: 1.15rem;
 }
 
-.player,
-.fallbackPlayer {
+.player {
   position: relative;
   width: 100%;
   max-width: 720px;
@@ -19,8 +18,7 @@
   background: #000;
 }
 
-.player iframe,
-.fallbackPlayer iframe {
+.player iframe {
   position: absolute;
   inset: 0;
   width: 100%;

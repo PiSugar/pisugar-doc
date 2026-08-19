@@ -24,6 +24,8 @@ jobs:
         run: npm ci
       - name: Build website
         run: npm run build
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3

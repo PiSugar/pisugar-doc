@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # PiSugar3 RTC
 
-All PiSugar 3 models have an RTC (stimulated by MCU), which can easily be used by hwclock. 
+All PiSugar 3 models have an MCU-emulated DS3231-compatible RTC, which can be used with `hwclock`.
 
 **Function description**
 
@@ -12,29 +12,39 @@ address: 0x68 as same as ds3231
 
 Data description: The clock part is consistent with ds3231
 
-**Using PiSugar RTC as System Clock**
+## Using PiSugar RTC as the system clock
 
-Take Raspberry Pi OS kernel version: 5.15 as an example, for other system versions, please refer to the operating instructions of ds3231
+The following steps use Raspberry Pi OS with kernel 5.15 as an example. For other systems, consult their DS3231 configuration instructions.
 
-1. Open I2C port
-2. Upgrade pisugar firmware to the latest version
-3. Write the following to the /boot/config file:
+1. Enable the I2C interface.
+2. Upgrade the PiSugar firmware to the latest version.
+3. Open the Raspberry Pi boot configuration file:
 
-   `dtoverlay=i2c-rtc,ds3231`
+   - Raspberry Pi OS Bookworm and later: `/boot/firmware/config.txt`
+   - Older Raspberry Pi OS releases: `/boot/config.txt`
 
-   The modified file should look like this:
+   Add the following line under the global `[all]` section (or outside any model-specific section):
 
-     <!-- <img width="600" src="https://cdn.pisugar.com/img/config.png"> -->
+   ```ini
+   [all]
+   dtoverlay=i2c-rtc,ds3231
+   ```
 
-4. Restart the system
+   If the file already contains an `[all]` section, add only the `dtoverlay` line to that section. Do not add the overlay more than once.
 
-After the above steps, RTC should have been mounted with the system,you can use the following instructions to verify:
+4. Save the file and restart the system:
 
-Use the following command to view the I2C mounting:
+   ```bash
+   sudo reboot
+   ```
+
+After the restart, the RTC should be registered by the system. You can use the following commands to verify it.
+
+Use the following command to inspect the I2C bus:
 
 `i2cdetect -y 1`
 
-As a result, the UU mark can be seen at 0x68, indicating that it has been occupied by the system
+The `UU` mark at address `0x68` indicates that the RTC address is in use by a kernel driver.
 
 ```
 pi@PI4B:~ $ i2cdetect -y 1
@@ -49,7 +59,16 @@ pi@PI4B:~ $ i2cdetect -y 1
 70: -- -- -- -- -- -- -- --
 ```
 
-Then you can use the hwclock command
+## Install and use `hwclock`
+
+Some minimal Raspberry Pi OS images do not include `hwclock`. If the command is missing, install it with:
+
+```bash
+sudo apt update
+sudo apt install util-linux-extra
+```
+
+You can then read the RTC, write the current system time to it, and read it again:
 
 ```
 pi@PI4B:~ $ sudo hwclock -r

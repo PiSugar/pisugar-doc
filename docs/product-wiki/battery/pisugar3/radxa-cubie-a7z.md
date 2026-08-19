@@ -6,6 +6,12 @@ sidebar_position: 5
 
 The default I2C frequency for `i2c-7` on the Radxa Cubie A7Z is set to `400kHz`. However, in some cases, this may lead to instability in detecting the PiSugar3 battery device. This document provides a step-by-step guide to downclock `i2c-7` to `100kHz`, which can improve the detection success rate of the battery device.
 
+:::warning Fan compatibility
+The magnets in PiSugar 3 can interfere with the Hall sensor in the official Radxa Cubie A7Z heatsink fan when the fan is mounted directly above them. This can cause the fan to stop spinning and may lead to overheating.
+
+Do not use this fan and PiSugar 3 in the affected stacked position. Use a cooling solution that is not affected by the magnets, or increase the physical separation between the fan and PiSugar 3. After assembly, power the system briefly while monitoring it and confirm that the fan starts and continues spinning before normal use.
+:::
+
 ## Applicable Scenarios
 
 - PiSugar3 power supply and physical wiring have been confirmed to be normal.
@@ -135,4 +141,3 @@ sudo systemctl restart pisugar-server
 ```
 
 All set! You should now be able to read battery information through the `pisugar-server` webUI.
-

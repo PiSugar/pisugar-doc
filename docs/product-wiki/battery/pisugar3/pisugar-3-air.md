@@ -29,7 +29,7 @@ PiSugar3 Air must be used with a single-cell 3.7V lithium battery only. Check th
 | Electrical Specifications |      PiSugar 3 Air      |
 | :------------------------ | :---------------------: |
 | Input                     |        5V-3Amax         |
-| Output                    |       5V-2.5Amax        |
+| Output                    |        5V-3Amax         |
 | Battery capacity          | User-selected 3.7V cell |
 | Communication interface   |    0x57/0x68 address    |
 | Size of PCB               |        65mmX30mm        |

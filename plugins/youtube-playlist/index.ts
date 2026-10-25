@@ -26,6 +26,7 @@ type PlaylistResponse = {
 export type PlaylistData = {
   playlistId: string;
   items: PlaylistItem[];
+  fallback: boolean;
 };
 
 const YOUTUBE_API_URL = 'https://www.googleapis.com/youtube/v3/playlistItems';
@@ -43,6 +44,17 @@ export default function youtubePlaylistPlugin(
       const apiKey = process.env.YOUTUBE_API_KEY;
 
       if (!apiKey) {
+        if (process.env.NODE_ENV !== 'production') {
+          console.warn(
+            '[youtube-playlist] YOUTUBE_API_KEY is not set; using the playlist embed during local development.',
+          );
+          return {
+            playlistId: options.playlistId,
+            items: [],
+            fallback: true,
+          };
+        }
+
         throw new Error(
           '[youtube-playlist] YOUTUBE_API_KEY is required to expand the playlist during the build.',
         );
@@ -94,6 +106,7 @@ export default function youtubePlaylistPlugin(
       return {
         playlistId: options.playlistId,
         items: expandedItems,
+        fallback: false,
       };
     },
 

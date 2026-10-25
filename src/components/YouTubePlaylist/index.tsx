@@ -17,6 +17,7 @@ type PlaylistItem = {
 type PlaylistData = {
   playlistId: string;
   items: PlaylistItem[];
+  fallback: boolean;
 };
 
 type Props = {
@@ -30,6 +31,21 @@ export default function YouTubePlaylist({playlistId}: Props): React.ReactNode {
 
   if (data.playlistId !== playlistId) {
     throw new Error(`No build-time data found for YouTube playlist ${playlistId}.`);
+  }
+
+  if (data.fallback) {
+    return (
+      <div className={styles.player}>
+        <iframe
+          src={`https://www.youtube.com/embed/videoseries?list=${playlistId}`}
+          title="Whisplay AI Chatbot playlist"
+          loading="lazy"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        />
+      </div>
+    );
   }
 
   return (

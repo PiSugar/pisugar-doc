@@ -26,6 +26,7 @@ It can remember up to six Bluetooth hosts, includes a six-axis IMU for experimen
 | Paired hosts | Up to 6 |
 | Controller | nRF52840, nice!nano v2 compatible |
 | Layout | Card-sized QWERTY, approximately 69 keys plus an Fn layer |
+| Dimensions | 88 × 72 × 5.8 mm (excluding the approximately 1.2 mm key protrusion) |
 | Air mouse | QMI8658A six-axis IMU; experimental |
 | Backlight | White, available while USB power is connected |
 | Battery | LP301060 LiPo, approximately 120 mAh |
@@ -195,6 +196,7 @@ The resulting firmware is written to `build/zephyr/zmk.uf2`. Follow the reposito
 
 | Item | Specification |
 | --- | --- |
+| Dimensions | 88 × 72 × 5.8 mm (excluding the approximately 1.2 mm key protrusion) |
 | Keyboard matrix | 6 rows × 13 columns, row-to-column diodes |
 | Debounce | 10 ms press / 10 ms release |
 | IMU | QMI8658A six-axis sensor over I²C |

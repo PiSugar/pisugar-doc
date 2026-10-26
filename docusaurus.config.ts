@@ -1,6 +1,7 @@
 import { themes as prismThemes } from "prism-react-renderer";
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
+import googleGtagPlugin from "./plugins/google-gtag";
 import youtubePlaylistPlugin from "./plugins/youtube-playlist";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
@@ -57,7 +58,7 @@ const config: Config = {
       },
     ],
     [
-      "@docusaurus/plugin-google-gtag",
+      googleGtagPlugin,
       {
         trackingID: "G-6K1JYDGLHP", // ← 你的 Google Analytics 4 ID
         anonymizeIP: true, // 可选：是否匿名用户IP

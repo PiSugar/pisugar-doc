@@ -14,7 +14,7 @@ slug: /product-wiki/whisplay-plus/overview
 | Display | ST7701P, 2.8-inch IPS, 480 × 640, RGB888 |
 | Display interface | Two-lane MIPI DSI |
 | Touch | GT911, five-point capacitive touch, I2C address `0x5d` |
-| Audio | ES8389 (`0x10`) or WM8960 (`0x1a`), I2S data and I2C control |
+| Audio | ES8389 (`0x10`), I2S data and I2C control |
 | External speaker | 4-pin stereo output |
 | Motion sensor | QMI8658B accelerometer and gyroscope, I2C address `0x6b` |
 | Magnetometer | MQC5883P, I2C address `0x2c` |

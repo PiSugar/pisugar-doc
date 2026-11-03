@@ -19,7 +19,7 @@ Whisplay HAT+ is designed for interactive projects such as voice assistants, por
 
 - **2.8-inch IPS touch display:** 480 × 640 pixels over two-lane MIPI DSI
 - **Five-point capacitive touch:** GT911 touch controller
-- **Audio input and output:** onboard Whisplay Sound card with microphone support and a 4-pin external stereo speaker connector
+- **Audio input and output:** onboard ES8389 Whisplay Sound card with microphone support and a 4-pin external stereo speaker connector
 - **Motion sensing:** QMI8658B accelerometer and gyroscope
 - **Direction sensing:** MQC5883P three-axis magnetometer
 - **User controls:** RGB LED and physical button

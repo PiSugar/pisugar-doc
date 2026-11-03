@@ -1,5 +1,6 @@
 ---
 sidebar_position: 2
+slug: /product-wiki/whisplay/chatbot
 ---
 
 import YouTubePlaylist from '@site/src/components/YouTubePlaylist';

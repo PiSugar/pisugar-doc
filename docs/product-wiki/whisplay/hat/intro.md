@@ -1,5 +1,6 @@
 ---
 sidebar_position: 0
+slug: /product-wiki/whisplay/intro
 ---
 
 # Whisplay HAT
@@ -20,7 +21,7 @@ Despite its tiny form factor, it packs an impressive array of hardware features:
 
 - **1.69inch IPS LCD Display**: High-quality color screen for visual interfaces, 240x280 pixels
 - **Dual Microphones**: For voice recognition and audio recording
-- **Built-in Speaker**: For audio playback and notifications
+- **Speaker Output**: Audio playback through the onboard speaker path or a 2-pin external mono speaker connector
 - **Mouse Buttons**: For navigation and control
 - **RGB LED Indicator**: For status information and visual feedback
 

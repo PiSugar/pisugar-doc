@@ -1,5 +1,6 @@
 ---
 sidebar_position: 1
+slug: /product-wiki/whisplay/overview
 ---
 
 # Product Overview
@@ -10,7 +11,7 @@ sidebar_position: 1
 
 - Power supply voltage: 5V
 - Logic voltage: 3.3V
-- Audio codec chip: ES8389 / WM8960
+- Audio codec chip: WM8960 (Whisplay HAT V1) / ES8389 (Whisplay HAT V2)
 - Audio control interface: I2C
 - Audio data interface: I2S
 - Speaker power: 8Ω 1W
@@ -20,20 +21,30 @@ sidebar_position: 1
 - Screen interface: 4-SPI
 
 :::info
-Due to the discontinuation of the WM8960 chip, new Whisplay HAT units have been upgraded to the ES8389 audio codec. The Whisplay driver supports both audio codec versions starting from v3.0.0.
+**Whisplay HAT V1** uses the WM8960 audio codec. After the WM8960 was discontinued, **Whisplay HAT V2** was introduced with the ES8389 audio codec. The Whisplay driver supports both hardware versions starting from v3.0.0.
 :::
 
 ## Supported Platforms
 
-The current Whisplay driver supports:
+The current driver on the [GitHub `main` branch](https://github.com/PiSugar/Whisplay) supports:
 
-- Raspberry Pi boards with a 40-pin header, using the official full Raspberry Pi OS image
-- Radxa ZERO 3W (RK3566), using the official Debian 12 Bookworm image
-- Radxa Cubie A7Z (Allwinner A733), using the official Debian 11 Bullseye image
+| Platform | SoC | Tested system / notes |
+| :--- | :--- | :--- |
+| Raspberry Pi models with a 40-pin header | Varies | Official full Raspberry Pi OS image |
+| Orange Pi Zero 2W | Allwinner H618 | Official Debian Bookworm 1.0.2, Linux 6.1.31 |
+| Orange Pi Zero 3W | Allwinner A733 | Official Debian Bookworm 1.0.0, Linux 6.6.98; **Whisplay V2 only** |
+| MangoPi MQ Quad | Allwinner H616 | Orange Pi OS 3.0.8, Linux `5.16.17-sun50iw9`; tested with Whisplay HAT V2 (ES8389) and V1 (WM8960) |
+| Radxa ZERO 3W | Rockchip RK3566 | Official Debian 12 Bookworm image |
+| Radxa Cubie A7Z | Allwinner A733 | Official Debian 11 Bullseye image; **Whisplay V2 only** |
 
-:::warning Radxa Cubie A7Z hardware notice
-Due to circuit incompatibility, the Whisplay HAT physical button is not safe to use on Radxa Cubie A7Z.
-Do not press the button, otherwise the A7Z may shut down or lose power immediately.
+The unified `install_driver.sh` installer detects these platforms and runs the matching script. The MangoPi MQ Quad image may identify the board as an Orange Pi Zero2; if automatic detection is incorrect, run its installer explicitly:
+
+```bash
+sudo bash script/install_mangopi_mq_quad.sh
+```
+
+:::warning Whisplay V1 hardware safety notice
+Orange Pi Zero 3W and Radxa Cubie A7Z must be used with **Whisplay V2** hardware. Do not connect Whisplay V1 to either board: its button circuit carries 5 V, and pressing the button can immediately cut power to the board.
 :::
 
 ## Hardware Resources
@@ -57,14 +68,14 @@ Do not press the button, otherwise the A7Z may shut down or lose power immediate
 
 Whisplay allows enhanced audio flexibility. You can switch to an external speaker using the dedicated control.
 
-Compatible speakers must be single-channel mono speakers and use a PH2.0 connector.
+The external speaker interface is a **2-pin mono output**. Compatible speakers must be single-channel mono speakers and use a 2-pin PH2.0 connector.
 
 ## Getting Started
 
 The Whisplay driver is maintained on GitHub:
 [https://github.com/PiSugar/Whisplay](https://github.com/PiSugar/Whisplay)
 
-The `develop` branch uses a unified installer that detects the current platform and runs the matching platform script.
+The repository provides a unified installer that detects the current platform and runs the matching platform script.
 
 ```bash
 git clone https://github.com/PiSugar/Whisplay.git --depth 1

@@ -1,8 +1,8 @@
 {
-  "label": "Whisplay HAT",
+  "label": "Whisplay",
   "position": 2,
   "link": {
     "type": "doc",
-    "id": "product-wiki/whisplay/intro"
+    "id": "product-wiki/whisplay/index"
   }
 }

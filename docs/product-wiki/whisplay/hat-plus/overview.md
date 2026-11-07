@@ -71,6 +71,12 @@ Whisplay HAT+ provides a **4-pin stereo external speaker connector**. Use a matc
 Power off the Raspberry Pi before connecting or disconnecting the external speaker.
 :::
 
+## Hardware Installation
+
+<video width="600" controls>
+  <source src="https://doc-resourses.pisugar.uk/whisplay-plus-install-compatible.mp4" type="video/mp4"></source>
+</video>
+
 ## Install the Driver
 
 On the Raspberry Pi, open a terminal and run:

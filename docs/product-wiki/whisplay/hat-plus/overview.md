@@ -74,7 +74,7 @@ Power off the Raspberry Pi before connecting or disconnecting the external speak
 ## Hardware Installation
 
 <video width="600" controls>
-  <source src="https://doc-resourses.pisugar.uk/whisplay-plus-install-compatible.mp4" type="video/mp4"></source>
+  <source src="https://doc-resourses.pisugar.uk/whisplay-plus-install-v2-compatible.mp4" type="video/mp4"></source>
 </video>
 
 ## Install the Driver

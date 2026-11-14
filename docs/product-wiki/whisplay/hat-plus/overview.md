@@ -147,26 +147,7 @@ The magnetometer is affected by the onboard speaker, magnets, cables, and nearby
 
 ## Configure Grove Port.X
 
-Grove Port.X uses I2C by default. The standard overlay configuration is:
-
-```ini
-dtoverlay=whisplay-plus
-```
-
-To route Grove Port.X to UART, add the `port_x_uart` parameter in `/boot/firmware/config.txt` and enable UART:
-
-```ini
-enable_uart=1
-dtoverlay=whisplay-plus,port_x_uart
-```
-
-If the HAT EEPROM loads the overlay automatically, place the following setting before the overlay is loaded:
-
-```ini
-dtparam=port_x_uart=on
-```
-
-The separate [`whisplay-grove-sensors`](https://github.com/PiSugar/whisplay-grove-sensors) project provides Linux/Python drivers, detection tools, and demos for compatible M5Stack I2C and UART Units. See [Grove Port.X and M5Stack Units](./grove-units.md) for the supported functions and installation instructions.
+Grove Port.X supports I2C and TTL UART Units. See [Grove Port.X and Compatible Sensors](./grove-units.md) for connection instructions, mode configuration, driver installation, the current compatibility list, demos, and troubleshooting.
 
 ## Advanced Overlay Options
 

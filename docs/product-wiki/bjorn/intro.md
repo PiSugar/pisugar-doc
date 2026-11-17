@@ -4,7 +4,7 @@ sidebar_position: 0
 
 # Bjorn
 
-<img src="https://raw.githubusercontent.com/markatsos/bjorn-pisugar/v0.3.0/docs/device.jpg" alt="Bjorn on a Raspberry Pi Zero 2 W with PiSugar 3: on battery, and charging" width="400"></img>
+<img src="https://raw.githubusercontent.com/markatsos/bjorn-pisugar/v0.3.1/docs/device.jpg" alt="Bjorn on a Raspberry Pi Zero 2 W with PiSugar 3: on battery, and charging" width="400"></img>
 
 [Bjorn](https://github.com/infinition/Bjorn) is an autonomous network scanning, vulnerability assessment and offensive security tool for the Raspberry Pi, with a Tamagotchi-like character on an e-ink display and a web interface. It discovers hosts and open services on the network it joins, tests them for known weaknesses, and shows its progress on the screen. It is meant for education and for authorized testing only: use it only on networks you own or have permission to test.
 
@@ -25,7 +25,7 @@ PiSugar support for Bjorn comes from [bjorn-pisugar](https://github.com/markatso
 | Display | Waveshare 2.13-inch e-ink, V4 |
 | System | Raspberry Pi OS Bookworm Lite, 64-bit (2024-10-22) |
 | Bjorn | v1.0.0 alpha 2, commit `61a4758` |
-| Add-on | bjorn-pisugar v0.3.0 |
+| Add-on | bjorn-pisugar v0.3.1 |
 
 This is the only combination that has been verified. The add-on patches exact lines of Bjorn's source code, so it is tied to the Bjorn version above: on any other version, the installer stops before changing anything.
 
@@ -38,7 +38,7 @@ https://github.com/infinition/Bjorn/blob/main/INSTALL.md
 Then add PiSugar support:
 
 ```bash
-git clone --branch v0.3.0 https://github.com/markatsos/bjorn-pisugar.git
+git clone --branch v0.3.1 https://github.com/markatsos/bjorn-pisugar.git
 cd bjorn-pisugar
 sudo ./install.sh --model pisugar3
 ```

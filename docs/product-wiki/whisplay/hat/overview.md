@@ -12,6 +12,7 @@ slug: /product-wiki/whisplay/overview
 - Power supply voltage: 5V
 - Logic voltage: 3.3V
 - Audio codec chip: WM8960 (Whisplay HAT V1) / ES8389 (Whisplay HAT V2)
+- Onboard HAT EEPROM: Whisplay HAT V2 only ([programming parameters](../index.md#eeprom-programming-parameters))
 - Audio control interface: I2C
 - Audio data interface: I2S
 - Speaker power: 8Ω 1W

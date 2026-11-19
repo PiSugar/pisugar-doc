@@ -25,11 +25,27 @@ Whisplay boards are designed for voice assistants, portable dashboards, smart-ho
 | External speaker connector | 2-pin, mono | 4-pin, stereo |
 | User controls | Physical button and RGB LED | Physical button and RGB LED |
 | Motion sensors | — | Accelerometer, gyroscope, and magnetometer |
+| Onboard HAT EEPROM | V2 only | Yes |
 | Expansion | 40-pin header | 40-pin header and switchable I2C/UART Grove Port.X |
 
 :::info
 Whisplay HAT and Whisplay HAT+ use different displays, wiring, and drivers. Follow the documentation for your exact model.
 :::
+
+## EEPROM Programming Parameters
+
+| Parameter | Whisplay HAT V2 (ES8389) | Whisplay HAT+ |
+| :--- | :--- | :--- |
+| Vendor string (`vendor`) | `"PiSugar"` | `"PiSugar"` |
+| Product string (`product`) | `"Whisplay HAT"` | `"Whisplay HAT+"` |
+| Product ID (`product_id`) | `0x0001` | `0x0002` |
+| Product version (`product_ver`) | `0x0200` | `0x0100` |
+| Product UUID (`product_uuid`) | Unique per board | Unique per board |
+| Device Tree overlay | `whisplay-soundcard` | `whisplay-plus` |
+
+The Raspberry Pi reference for the standard HAT class uses a 7-bit I2C address of `0x50` on the 3.3 V ID bus, with `ID_SD` on GPIO0 (physical pin 27) and `ID_SC` on GPIO1 (physical pin 28). [Raspberry Pi HAT+ specification](https://datasheets.raspberrypi.com/hat/hat-plus-specification.pdf)
+
+Product-specific references are available in the [Whisplay HAT driver installer](https://github.com/PiSugar/Whisplay/blob/main/audio/whisplay-soundcard/scripts/install.sh) and the [Whisplay HAT+ driver documentation](https://github.com/PiSugar/whisplay-plus#notes).
 
 ## Whisplay HAT
 

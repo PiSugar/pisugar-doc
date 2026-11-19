@@ -19,6 +19,7 @@ slug: /product-wiki/whisplay-plus/overview
 | Motion sensor | QMI8658B accelerometer and gyroscope, I2C address `0x6b` |
 | Magnetometer | MQC5883P, I2C address `0x2c` |
 | User input/output | Physical button and RGB LED |
+| Onboard HAT EEPROM | Yes ([programming parameters](../index.md#eeprom-programming-parameters)) |
 | Grove Port.X | I2C or UART, selected by GPIO27 |
 
 ## Supported Platforms
